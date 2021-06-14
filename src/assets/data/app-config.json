@@ -1,0 +1,446 @@
+{
+  "appName": "Coloring Book Activity",
+  "introPageTitle": "Introduction Title",
+  "introPageInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>",
+  "coloringPages": {
+    "colorOptions": [
+      {
+        "order": 1,
+        "name": "red",
+        "color": "#FF0000"
+      },
+      {
+        "order": 2,
+        "name": "orange",
+        "color": "#FFA500"
+      },
+      {
+        "order": 3,
+        "name": "yellow",
+        "color": "#FFFF00"
+      },
+      {
+        "order": 4,
+        "name": "green",
+        "color": "#008000"
+      },
+      {
+        "order": 5,
+        "name": "blue",
+        "color": "#0000FF"
+      },
+      {
+        "order": 6,
+        "name": "purple",
+        "color": "#A020F0"
+      },
+      {
+        "order": 7,
+        "name": "black",
+        "color": "#00000"
+      },
+      {
+        "order": 8,
+        "name": "gray",
+        "color": "#CCCCCC"
+      },
+      {
+        "order": 9,
+        "name": "dark-gray",
+        "color": "#808080"
+      },
+      {
+        "order": 10,
+        "name": "dark-orange",
+        "color": "#CC8B34"
+      },
+      {
+        "order": 11,
+        "name": "pink",
+        "color": "#FFC0CB"
+      },
+      {
+        "order": 12,
+        "name": "light-yellow",
+        "color": "#FFE39F"
+      },
+      {
+        "order": 13,
+        "name": "dark-red",
+        "color": "#A52A2A"
+      },
+      {
+        "order": 14,
+        "name": "light-purple",
+        "color": "#DBBFF6"
+      },
+      {
+        "order": 15,
+        "name": "birght-green",
+        "color": "#9ACD32"
+      },
+      {
+        "order": 16,
+        "name": "teal",
+        "color": "#0D98BA"
+      }
+    ],
+    "pages": [
+      {
+        "order": 1,
+        "svg": "Marie1.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "svg": "Marie2.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "svg": "Marie3.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "svg": "Marie4.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "svg": "Marie5.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 6,
+        "svg": "Marie6.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 7,
+        "svg": "Marie7.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 8,
+        "svg": "Marie8.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 9,
+        "svg": "Marie9.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 10,
+        "svg": "Marie10.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 11,
+        "svg": "Marie11.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 12,
+        "svg": "Marie12.svg",
+        "captionOptins": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to reply only on the Providence of such a good."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      }
+    ]
+  },
+  "summaryPageTitle": "Summary Title",
+  "SummaryInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>"
+}

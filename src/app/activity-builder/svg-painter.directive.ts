@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
 
 @Directive({ selector: '[svgPainter]' })
 export class SvgPainterDirective {
@@ -15,6 +15,14 @@ export class SvgPainterDirective {
   ngAfterContentInit(): void {
     //Called after ngOnInit when the component's or directive's content has been initialized.
     //Add 'implements AfterContentInit' to the class.
+
+  }
+
+  ngOnChanges(changes: any) {
+    if (changes.activity && changes.activity.firstChange) {
+      this.repaintSvg();
+    }
+
     this.children = this.element.nativeElement.querySelectorAll('path, circle, ellipse, polyline, line, rect, polygon');
 
     this.children.forEach((child: HTMLElement) => {
@@ -25,23 +33,28 @@ export class SvgPainterDirective {
         }
       })
     });
+    this.repaintSvg();
 
-    if(this.activity && Object.keys(this.activity).length){
-      for (const k in this.activity) {
-        if (Object.prototype.hasOwnProperty.call(this.activity, k)) {
-          const element = this.activity[k];
-          console.log(k, element);
-          const e: any = document.querySelector(`.${k}`);
-          e.style.fill = element;
-        }
-      }
-    }
+
   }
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     //@todo remove event listner.
+  }
+
+  private repaintSvg() {
+    if (this.activity && Object.keys(this.activity).length) {
+      for (const k in this.activity) {
+        if (Object.prototype.hasOwnProperty.call(this.activity, k)) {
+          const color = this.activity[k];
+          const element: any = document.querySelector(`#${k}`);
+          if (element)
+            element.style.fill = color;
+        }
+      }
+    }
   }
 
   private fillColor(el: HTMLElement, color: string) {

@@ -7,11 +7,13 @@ import { ActivityBuilderRoutingModule } from './activity-builder-routing.module'
 import { ActivityBuilderComponent } from './activity-builder.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SvgPainterDirective } from './svg-painter.directive';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 @NgModule({
   imports: [
     CommonModule,
     DragDropModule,
+    InlineSVGModule.forRoot(),
     ActivityBuilderRoutingModule,
   ],
   declarations: [ActivityBuilderComponent, IntroductionComponent, ActivityPageComponent, OverviewPageComponent, SvgPainterDirective],

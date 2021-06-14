@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem, copyArrayItem } from '@angular/cdk/drag-drop';
+import { AppProvider } from 'src/app/app.provider';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-activity-page',
@@ -7,31 +11,44 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, copyArrayItem } from '
   styleUrls: ['./activity-page.component.scss']
 })
 export class ActivityPageComponent implements OnInit {
-
-  public selectedCaption: string[] = [];
+  public appConfig: any;
+  public selectedCaption: any[] = [];
   public selectedColor: string = '';
-  private activityId: string = 'page_1';
+  private activityId: number = 1;
   private activities: any = {};
   public activity: any = {};
+  private activityPageCount: number = 0;
+  public colors;
+  public captions: any[] = [];
+  public svgUrl: any;
 
-  public colors = ['#FF0000', '#FFA500', '#FFFF00', '#008000', '#0000FF', '#A020F0', '#000000', '#CCCCCC', '#808080', '#CC8B34', '#FFC0CB', '#ffe39f', '#A52A2A', '#DBBFF6', '#9ACD32', '#0D98BA'];
-  public captions = [
-    'Build in your soul on interior solitude that you can keen everywhere. There, live in God.',
-    'God expects great things from you if you let him handle your.',
-    'God has his hour and he\'ll enable you to accomplish what he has determined for you from all eternity.',
-    'How good is to reply only on the Providence of such a good.',
-    'Jesus knows what he wants to do with us, let us be glad to let Him do it.',
-    'I am surprised that knowing that God is our Father, we aren\'t always happy.'
-  ];
-
-  constructor() { }
+  constructor(
+    private appProvider: AppProvider,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient,
+    private sanitize: DomSanitizer) {
+    this.appConfig = this.appProvider.appConfig;
+    this.colors = this.appConfig.coloringPages.colorOptions;
+  }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      this.activityId = parseInt(params.id);
+      this.loadActivity(this.activityId);
+      this.reloadConfig();
+      this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
+    });
+
+  }
+
+  private reloadConfig() {
     let activities: any = localStorage.getItem('activities') || '';
     try {
       activities = JSON.parse(activities);
+      console.log(activities);
     } catch (error) {
-      activities = [];
+      activities = {};
     }
     this.activities = activities;
     const activity = activities[this.activityId];
@@ -39,7 +56,16 @@ export class ActivityPageComponent implements OnInit {
       this.selectedCaption = activity['caption'];
       delete activity.caption;
     }
-    this.activity = activity;
+    this.activity = activity || {};
+  }
+
+  private loadActivity(id: any) {
+    const pages = this.appConfig.coloringPages.pages;
+    const activity = pages.find((a: any) => {
+      return a.order == this.activityId;
+    });
+    this.activityPageCount = pages.length;
+    this.captions = activity.captionOptins;
   }
   /**
    * @name selectColor
@@ -80,6 +106,7 @@ export class ActivityPageComponent implements OnInit {
       this.activities[this.activityId] = {};
     }
     this.activities[this.activityId]['caption'] = this.selectedCaption;
+    this.saveData(this.activities);
   }
 
   /**
@@ -95,17 +122,44 @@ export class ActivityPageComponent implements OnInit {
    */
   public onSvgClicked(data: { element: HTMLElement, color: string }) {
     if (!data.color) return;
-    const cssClass: any = data.element.className;
+    const id:any = data.element.getAttribute('id');
     if (!this.activities[this.activityId]) {
       this.activities[this.activityId] = {};
     }
-    this.activities[this.activityId][cssClass.baseVal] = data.color;
+    this.activities[this.activityId][id] = data.color;
     this.saveData(this.activities);
   }
-
+  /**
+   * @name saveData
+   * @description save activity data to localstorage
+   * @param data
+   *
+   * @return void
+   */
   private saveData(data: any) {
     var activities = JSON.stringify(data);
     localStorage.setItem('activities', activities);
+  }
+
+  /**
+   * helper function
+   * @return void
+   */
+  public goBack() {
+    if (this.activityId === 1) {
+      this.router.navigateByUrl('/activity-builder');
+      return;
+    }
+    this.router.navigateByUrl(`activity-builder/activity/${this.activityId - 1}`);
+
+  }
+
+  public goNext() {
+    if (this.activityId === this.activityPageCount) {
+      this.router.navigateByUrl('/activity-builder/overview');
+      return;
+    }
+    this.router.navigateByUrl(`activity-builder/activity/${this.activityId + 1}`);
   }
 
 
