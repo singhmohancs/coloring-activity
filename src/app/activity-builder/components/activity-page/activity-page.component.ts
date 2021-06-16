@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem, copyArrayItem } from '@angular/cdk/drag-drop';
+import { moveItemInArray, copyArrayItem } from '@angular/cdk/drag-drop';
 import { AppProvider } from 'src/app/app.provider';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-activity-page',
@@ -26,9 +24,7 @@ export class ActivityPageComponent implements OnInit {
   constructor(
     private appProvider: AppProvider,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private http: HttpClient,
-    private sanitize: DomSanitizer) {
+    private activatedRoute: ActivatedRoute) {
     this.appConfig = this.appProvider.appConfig;
     this.colors = this.appConfig.coloringPages.colorOptions;
   }
@@ -40,7 +36,6 @@ export class ActivityPageComponent implements OnInit {
       this.reloadConfig();
       this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
     });
-    console.log(this.activity);
   }
 
   private reloadConfig() {

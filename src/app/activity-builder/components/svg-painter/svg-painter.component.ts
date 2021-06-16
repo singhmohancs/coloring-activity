@@ -33,7 +33,6 @@ export class SvgPainterComponent implements OnInit {
   public onSVGInserted(data: any){
     setTimeout(() =>{
       this.isSvgLoaded = true;
-      console.log('hdkjhsadk akshd ksdjasjdlasl djljsd');
     }, 100);
   }
 

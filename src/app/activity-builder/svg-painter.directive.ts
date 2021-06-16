@@ -13,31 +13,17 @@ export class SvgPainterDirective {
     this.element = el;
   }
 
-  ngAfterContentInit(): void {
-    //Called after ngOnInit when the component's or directive's content has been initialized.
-    //Add 'implements AfterContentInit' to the class.
-    this.children = this.element.nativeElement.querySelectorAll('path, circle, ellipse, polyline, line, rect, polygon');
+  ngOninit(): void {
 
-    this.children.forEach((child: HTMLElement) => {
-      child.addEventListener('click', () => {
-        this.fillColor(child, this.selectedColor);
-        if (this.onSvgClicked) {
-          this.onSvgClicked.emit({ element: child, color: this.selectedColor });
-        }
-      })
-    });
   }
 
   ngOnChanges(changes: any) {
-    this.children = this.element.nativeElement.querySelectorAll('path, circle, ellipse, polyline, line, rect, polygon');
-    this.children.forEach((child: HTMLElement) => {
-      child.addEventListener('click', () => {
-        this.fillColor(child, this.selectedColor);
-        if (this.onSvgClicked) {
-          this.onSvgClicked.emit({ element: child, color: this.selectedColor });
-        }
-      })
-    });
+    console.log('changes detection', changes);
+    //this.repaintSvg();
+    if (changes.hasOwnProperty('svgPainter') && changes.svgPainter.currentValue) {
+      this.svgClickHandler();
+    }
+
     this.repaintSvg();
   }
 
@@ -47,13 +33,33 @@ export class SvgPainterDirective {
     //@todo remove event listner.
   }
 
+  /**
+   * svgClickHandler
+   * bind click event on svg's elements.
+   *
+   * @private
+   * @memberof SvgPainterDirective
+   */
+  private svgClickHandler(): void {
+    this.children = this.element.nativeElement.querySelectorAll('path, circle, ellipse, polyline, line, rect, polygon');
+    this.children.forEach((child: HTMLElement) => {
+      child.addEventListener('click', () => {
+        this.fillColor(child, this.selectedColor);
+        if (this.onSvgClicked) {
+          this.onSvgClicked.emit({ element: child, color: this.selectedColor });
+        }
+      })
+    });
+  }
+
   private repaintSvg() {
+    console.log('repaint');
     if (this.activity && Object.keys(this.activity).length) {
       for (const k in this.activity) {
         if (Object.prototype.hasOwnProperty.call(this.activity, k)) {
           const color = this.activity[k];
           const element: any = document.querySelector(`#${k}`);
-          if(element){
+          if (element) {
             element.style.fill = color;
           }
         }
