@@ -1,5 +1,5 @@
 // Theme colors
-@import "../components/mixin.scss";
+@import "../components/mixin";
 
 $orange: #f59e0b !default;
 
@@ -9,8 +9,19 @@ $white: #fff !default;
 $black: #000 !default;
 $gray-90:#001f2b;
 $light-gray:#f7f6f6;
+$light:#fdfdfd;
 
 $primary: $orange !default;
 $theme-colors: ("primary": $primary) !default;
 $font-family-sans-serif: 'Quicksand', sans-serif;
 
+// fusv-disable
+$primary-100: tint-color($primary, 94%) !default;
+$primary-200: tint-color($primary, 60%) !default;
+$primary-300: tint-color($primary, 40%) !default;
+$primary-400: tint-color($primary, 20%) !default;
+
+$primary-600: shade-color($primary, 20%) !default;
+$primary-700: shade-color($primary, 40%) !default;
+$primary-800: shade-color($primary, 60%) !default;
+$primary-900: shade-color($primary, 80%) !default;

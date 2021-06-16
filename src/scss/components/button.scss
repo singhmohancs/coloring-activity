@@ -3,11 +3,12 @@
     transition: all 0.3s ease;
     border: 1px solid $primary !important;
     color: $white !important;
+    font-weight: 500 !important;
 
     &:hover,
     &:active,
     &:focus {
-        
+        background: $primary-400 !important;
         border: 1px solid $primary !important;
         box-shadow: none;
 
@@ -27,6 +28,7 @@
         border: 1px solid $primary;
         box-shadow: none;
         color: $white !important;
+        font-weight: 500 !important;
     }
 
 }

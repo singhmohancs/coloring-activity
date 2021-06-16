@@ -1,3 +1,4 @@
+
 .color-active {
   border-color: #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -43,16 +44,17 @@
 }
 
 .example-list {
-  border: solid 1px #ccc;
-  min-height: 60px;
-  background: white;
+  border: 1px solid #f7f6f6;
+	background:#fdfdfd;
+  min-height: 80px;
+ 
   border-radius: 4px;
   overflow: hidden;
   display: block;
 }
 
 .example-box {
-  padding: 20px 10px;
+ 
   border-bottom: solid 1px #ccc;
   color: rgba(0, 0, 0, 0.87);
   display: flex;
@@ -63,14 +65,19 @@
   cursor: move;
   background: white;
   font-size: 14px;
+ 
 }
 
 .cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0 8px 10px 1px rgba(0, 0, 0, 0.14),
-    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background: white;
+  display: flex;
+  align-items: center;
+  padding:0px 10px;
+  -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.08);
+	box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.08);
+ 
 }
 
 .cdk-drag-placeholder {
