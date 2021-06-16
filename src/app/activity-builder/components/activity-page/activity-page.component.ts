@@ -16,11 +16,12 @@ export class ActivityPageComponent implements OnInit {
   public selectedColor: string = '';
   private activityId: number = 1;
   private activities: any = {};
-  public activity: any = {};
+  public activity: any;
   private activityPageCount: number = 0;
   public colors;
   public captions: any[] = [];
   public svgUrl: any;
+  public activityConfig:any = {};
 
   constructor(
     private appProvider: AppProvider,
@@ -39,14 +40,13 @@ export class ActivityPageComponent implements OnInit {
       this.reloadConfig();
       this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
     });
-
+    console.log(this.activity);
   }
 
   private reloadConfig() {
     let activities: any = localStorage.getItem('activities') || '';
     try {
       activities = JSON.parse(activities);
-      console.log(activities);
     } catch (error) {
       activities = {};
     }
@@ -56,7 +56,7 @@ export class ActivityPageComponent implements OnInit {
       this.selectedCaption = activity['caption'];
       delete activity.caption;
     }
-    this.activity = activity || {};
+    this.activityConfig = activity;
   }
 
   private loadActivity(id: any) {
@@ -66,6 +66,8 @@ export class ActivityPageComponent implements OnInit {
     });
     this.activityPageCount = pages.length;
     this.captions = activity.captionOptins;
+    this.activity = activity;
+
   }
   /**
    * @name selectColor

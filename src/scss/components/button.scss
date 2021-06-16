@@ -1,0 +1,32 @@
+.btn-primary {
+    background: $primary !important;
+    transition: all 0.3s ease;
+    border: 1px solid $primary !important;
+    color: $white !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        
+        border: 1px solid $primary !important;
+        box-shadow: none;
+
+    }
+}
+
+.btn-outline-primary {
+    background: transparent !important;
+    transition: all 0.3s ease;
+    border: 1px solid $primary !important;
+    color: $primary !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $primary !important;
+        border: 1px solid $primary;
+        box-shadow: none;
+        color: $white !important;
+    }
+
+}

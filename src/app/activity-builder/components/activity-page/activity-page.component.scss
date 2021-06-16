@@ -1,3 +1,11 @@
+.color-active {
+  border-color: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
 .color-sample-container {
   margin-bottom: 30px;
 
@@ -11,13 +19,7 @@
     border: 2px solid transparent;
     height: 100%;
 
-    &.active {
-      border-color: #ccc;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    }
+
   }
 
 

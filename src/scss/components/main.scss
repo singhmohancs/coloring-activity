@@ -1,0 +1,69 @@
+@import "../variables/app";
+
+body {
+
+	background: transparent;
+	font-family: $font-family-sans-serif !important;
+	font-size: 0.875em !important;
+	color:$black !important;
+
+}
+html,body{
+	height:100%;
+}
+
+
+.main-wrapper{
+	height:100vh;
+
+	@media screen and(max-width:991px)and(min-width:320px){
+	height:100%;
+
+	}
+
+
+	.container{
+		@media screen and(max-width:991px)and(min-width:320px){
+			max-width:100%;
+			padding:0 rem(16px);
+		}
+	}
+
+
+}
+::-webkit-scrollbar {
+	width: px-rem(5px) !important;
+	height: px-rem(5px);
+
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $light-gray;
+
+}
+p{
+	&:not(:last-child){
+		margin-bottom: rem(20px);
+	}
+	&:last-child{
+		margin-bottom: rem(0px);
+	}
+}
+a{
+	color:$primary !important;
+	text-decoration: none !important;
+}
+
+.btn{
+	&:focus{
+		outline:none;
+		box-shadow: none !important;
+	}
+}
+
+
+

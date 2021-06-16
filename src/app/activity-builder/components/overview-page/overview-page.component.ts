@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppProvider } from 'src/app/app.provider';
 
 @Component({
   selector: 'app-overview-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewPageComponent implements OnInit {
 
-  constructor() { }
+  public activities:any;
+  constructor(public appProvider: AppProvider) { }
 
   ngOnInit() {
+    this.activities = this.appProvider.appConfig.coloringPages.pages;
+    console.log(this.activities);
   }
 
 }
