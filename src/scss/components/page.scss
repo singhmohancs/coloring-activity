@@ -18,7 +18,7 @@
 			font-size: rem(20px);
 		}
     }
-	
+
     h1{
         font-size: rem(30px);
        margin-bottom: rem(10px);
@@ -69,7 +69,7 @@
 	justify-content: space-between;
 	margin-top: rem(30px);
 	a {
-		font-size: rem(16px);
+		font-weight:600;
 	}
 }
 /**CARD-BANNER-RIGHT-IMAGE**/
@@ -280,7 +280,7 @@ padding: 0;
     justify-content: center;
     min-height: 100vh;
     height:100%;
-    padding: 0px 20px;
+  
     @media screen and(max-width: 991px)and(min-width:320px) {
         height: 100%;
     }
@@ -288,10 +288,7 @@ padding: 0;
 .caption-list {
 	border: 1px solid $light-gray;
 	background:$white !important;
-	
-	&.cdk-drop-list-dragging{
-		list-style: none;
-	}
+
 	li {
 		position: relative;
 		display: flex;
@@ -302,9 +299,7 @@ padding: 0;
 	
 	
 	}
-	.cdk-drag{
-		list-style: none;
-	}
+
 }
 
 .add-caption {
