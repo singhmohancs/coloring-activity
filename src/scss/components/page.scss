@@ -201,16 +201,18 @@ padding: 0;
             border: 1px solid $light-gray;
             padding: rem(10px);
             width: 100%;
-		
-		    height: auto;
+			height: 100%;
 		margin: 0px auto;
 		text-align: center;
         margin-bottom: rem(15px);
-		img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.img-info {
 			width: 100%;
-			height: rem(220px);
+			
 			max-width: rem(340px);
-			object-fit: contain;
+			
 		}
         }
     }
@@ -255,10 +257,10 @@ padding: 0;
 		height: rem(200px);
 		margin: 0px auto;
 		text-align: center;
-		img {
+		svg {
 			width: 100%;
-			height: 100%;
-			object-fit: contain;
+			max-width: rem(415px);
+		height: rem(200px);
 		}
 	}
     .stu-story-footer {
@@ -282,3 +284,31 @@ padding: 0;
         height: 100%;
     }
 } 
+.caption-list {
+	border: 1px solid $light-gray;
+	background:$white !important;
+	
+	&.cdk-drop-list-dragging{
+		list-style: none;
+	}
+	li {
+		position: relative;
+		display: flex;
+		padding: .75rem 1.25rem;
+		align-items: center;
+		background:$light !important;
+		border-bottom: 1px solid $light-gray;
+	
+	
+	}
+	.cdk-drag{
+		list-style: none;
+	}
+}
+
+.add-caption {
+	background: $light;
+	padding: rem(15px) !important;
+	border: 1px solid $light-gray;
+	min-height: rem(120px);
+}

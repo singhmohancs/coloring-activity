@@ -18,7 +18,7 @@
         <div class="col-md-12 col-lg-6">
           <div class="stu-activity-right-col">
             <div class="activity-img">
-              <div *ngIf="activity">
+                <div class="img-info" *ngIf="activity">
                 <app-svg-painter [activity]='activity' [activityConfig]="activityConfig" [selectedColor]='selectedColor'
                   (onSvgClicked)="onSvgClicked($event)"></app-svg-painter>
               </div>
@@ -30,10 +30,10 @@
         <div class="col-md-12 col-lg-6">
           <div class="stu-activity-right-col">
             <div class="stu-activity-header caption-heading pt-2  pb-2 d-flex align-items-start justify-content-start">
-              <h2>Caption options</h2>
+              <h2>Caption Options</h2>
             </div>
             <div class="stu-activity-content-area" cdkDropListGroup>
-              <ul cdkDropList [cdkDropListData]="captions" [cdkDropListSortingDisabled]="true" class="example-list">
+              <ul cdkDropList [cdkDropListData]="captions" [cdkDropListSortingDisabled]="true" class="example-list list-unstyled caption-list">
                 <li *ngFor="let caption of captions" cdkDrag>{{caption.captionLabel}}</li>
               </ul>
             </div>
@@ -44,7 +44,7 @@
             <h2>Caption It!</h2>
           </div>
 
-          <div class="captionable-zone" cdkDropList [cdkDropListData]="selectedCaption" class="example-list"
+          <div class="captionable-zone" cdkDropList [cdkDropListData]="selectedCaption" class="example-list add-caption "
             (cdkDropListDropped)="dropHandler($event)">
             <div class="example-box" *ngFor="let item of selectedCaption">{{item.captionLabel}}</div>
           </div>

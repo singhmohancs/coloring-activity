@@ -1,14 +1,24 @@
 
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
-  }
-  
-  
-  @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / 14 }em;
-  }
-  
-  @function px-rem($pxValue) {
-    @return #{stripUnit($pxValue) / 16 }rem;
-  }
+  @return $value / ($value * 0 + 1);
+}
+
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / 14 }em;
+}
+
+@function px-rem($pxValue) {
+  @return #{stripUnit($pxValue) / 16 }rem;
+}
+
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+@return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+@return mix(black, $color, $weight);
+}
 
