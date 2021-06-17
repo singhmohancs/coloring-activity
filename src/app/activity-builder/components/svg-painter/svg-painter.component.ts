@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChange } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivityBuilderService } from '../../activity-builder.service';
 
 @Component({
   selector: 'app-svg-painter',
@@ -14,7 +15,9 @@ export class SvgPainterComponent implements OnInit {
 
   public svgUrl: string = '';
   public isSvgLoaded: boolean = false;
-  constructor() { }
+  constructor(
+    private activityBuilderService: ActivityBuilderService
+  ) { }
 
   ngOnInit(): void {
     console.log(this.activityConfig);
@@ -31,9 +34,8 @@ export class SvgPainterComponent implements OnInit {
   }
 
   public onSVGInserted(data: any){
-    setTimeout(() =>{
-      this.isSvgLoaded = true;
-    }, 100);
+    this.activityBuilderService.bindSvgClick.emit();
+    this.activityBuilderService.bindSvgRepaint.emit();
   }
 
   public svgClicked(data: any){

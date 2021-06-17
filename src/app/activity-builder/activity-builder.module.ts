@@ -9,6 +9,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SvgPainterDirective } from './svg-painter.directive';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { SvgPainterComponent } from './components/svg-painter/svg-painter.component';
+import { ActivityBuilderService } from './activity-builder.service';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { SvgPainterComponent } from './components/svg-painter/svg-painter.compon
     ActivityBuilderRoutingModule,
   ],
   declarations: [ActivityBuilderComponent, IntroductionComponent, ActivityPageComponent, OverviewPageComponent, SvgPainterDirective, SvgPainterComponent],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
+  providers: [ActivityBuilderService]
 })
 export class ActivityBuilderModule { }
