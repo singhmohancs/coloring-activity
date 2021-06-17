@@ -2,8 +2,13 @@
 
 :host{
 
-  min-height:100vh;
-  display: flex;
-  align-items: center;
+  height:100%;
+ 
 }
 
+.intro-sec{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

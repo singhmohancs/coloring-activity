@@ -1,5 +1,7 @@
 @import "../../../../scss/variables/app";
 
+
+
 .color-active {
   border-color: $light-500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -23,6 +25,9 @@
     border: 1px solid $light-300;
     margin-bottom: 0.75rem;
     cursor: pointer;
+    @media screen and(max-width: 1024px)and(min-width:320px) {
+    font-size:rem(13px);
+    }
     &.active,
     &:hover {
       border-color: $light-green;

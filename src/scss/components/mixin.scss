@@ -5,7 +5,7 @@
 
 
 @function rem($pxValue) {
-  @return #{stripUnit($pxValue) / 14 }em;
+  @return #{stripUnit($pxValue) / 16 }em;
 }
 
 @function px-rem($pxValue) {
