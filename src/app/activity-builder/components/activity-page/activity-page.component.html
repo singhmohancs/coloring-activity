@@ -21,7 +21,7 @@
             </div>
             <div class="stu-activity-content-area">
               <ul class="list-unstyled caption-list">
-                <li *ngFor="let caption of captions">{{caption.captionLabel}}</li>
+                <li *ngFor="let caption of captions" (click)="selectCaption(caption)" [ngClass]="{'active': selectedCaption.order === caption.order}">{{caption.captionLabel}}</li>
               </ul>
             </div>
           </div>

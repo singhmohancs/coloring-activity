@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ActivityPageComponent implements OnInit {
   public appConfig: any;
-  public selectedCaption: any[] = [];
+  public selectedCaption: any;
   public selectedColor: string = '';
   private activityId: number = 1;
   private activities: any = {};
@@ -30,6 +30,7 @@ export class ActivityPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedCaption = {};
     this.activatedRoute.params.subscribe(params => {
       this.activityId = parseInt(params.id);
       this.loadActivity(this.activityId);
@@ -77,36 +78,6 @@ export class ActivityPageComponent implements OnInit {
   }
 
   /**
-   * @name dropHandler
-   * @description a drop handler to capture the dropped caption and save it to selectedCaption variable
-   * @param event
-   *
-   * @public
-   * @return void
-   */
-  public dropHandler(event: any) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      //empty caption list before adding new dropped item. List must store single item.
-      // @todo refactor - list must have single item.
-      event.container.data.length = 0;
-      copyArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
-    }
-
-    if (!this.activities[this.activityId]) {
-      this.activities[this.activityId] = {};
-    }
-    this.activities[this.activityId]['caption'] = this.selectedCaption;
-    this.saveData(this.activities);
-  }
-
-  /**
    * @name onSvgClicked
    * @description SVG element click handler.
    * Apply selected color on targeted element
@@ -136,6 +107,23 @@ export class ActivityPageComponent implements OnInit {
   private saveData(data: any) {
     var activities = JSON.stringify(data);
     localStorage.setItem('activities', activities);
+  }
+  /**
+   * selectCaption
+   * @description select caption and store in selectedCaption
+   *
+   * @param {*} caption
+   * @memberof ActivityPageComponent
+   *
+   * @return void
+   */
+  public selectCaption(caption: any){
+    this.selectedCaption = caption;
+    if (!this.activities[this.activityId]) {
+      this.activities[this.activityId] = {};
+    }
+    this.activities[this.activityId]['caption'] = this.selectedCaption;
+    this.saveData(this.activities);
   }
 
   /**
