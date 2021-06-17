@@ -1,7 +1,7 @@
 @import "../../../../scss/variables/app";
 
 .color-active {
-  border-color: #ccc;
+  border-color: $light-500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -19,14 +19,14 @@
     display: flex;
     padding: 0.5rem 0.5rem;
     align-items: center;
-    background: #f9f9f9;
-    border: 1px solid #f3eeee;
+    background: $light-200;
+    border: 1px solid $light-300;
     margin-bottom: 0.75rem;
     cursor: pointer;
     &.active,
     &:hover {
-      border-color: #6ebb6e;
-      background: #daffda;
+      border-color: $light-green;
+      background: $light-400;
     }
   }
 
