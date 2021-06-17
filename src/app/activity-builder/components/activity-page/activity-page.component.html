@@ -3,7 +3,7 @@
     <!--stu activity-->
     <section class="stu-activity-sec pt-4 pb-4 ">
       <div class="row stu-activity-row ">
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-4">
           <div
             class="stu-activity-header align-items-md-center justify-content-md-center mb-4 pb-0 d-flex flex-column align-items-lg-start justify-content-lg-start">
             <h2>Color It!</h2>
@@ -14,54 +14,32 @@
             <button class="p-2 btn btn-sm" type="button" *ngFor="let item of colors" (click)="selectColor(item.color)"
               [style.backgroundColor]="item.color" [ngClass]="{'color-active': item.color === selectedColor}"></button>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-6">
-          <div class="stu-activity-right-col">
-            <div class="activity-img">
-                <div class="img-info" *ngIf="activity">
-                <app-svg-painter [activity]='activity' [activityConfig]="activityConfig" [selectedColor]='selectedColor'
-                  (onSvgClicked)="onSvgClicked($event)"></app-svg-painter>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row  stu-activity-row ">
-        <div class="col-md-12 col-lg-6">
+
           <div class="stu-activity-right-col">
             <div class="stu-activity-header caption-heading pt-2  pb-2 d-flex align-items-start justify-content-start">
-              <h2>Caption Options</h2>
+              <h2>Select Caption</h2>
             </div>
-            <div class="stu-activity-content-area" cdkDropListGroup>
-              <ul cdkDropList [cdkDropListData]="captions" [cdkDropListSortingDisabled]="true" class="example-list list-unstyled caption-list">
-                <li *ngFor="let caption of captions" cdkDrag>{{caption.captionLabel}}</li>
+            <div class="stu-activity-content-area">
+              <ul class="list-unstyled caption-list">
+                <li *ngFor="let caption of captions">{{caption.captionLabel}}</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6">
-          <div class="stu-activity-header  caption-heading pt-2   pb-2 d-flex align-items-start justify-content-start">
-            <h2>Caption It!</h2>
+        <div class="col-md-12 col-lg-8">
+          <div class="stu-activity-right-col">
+            <app-svg-painter [activity]='activity' [activityConfig]="activityConfig" [selectedColor]='selectedColor'
+              (onSvgClicked)="onSvgClicked($event)"></app-svg-painter>
           </div>
-
-          <div class="captionable-zone" cdkDropList [cdkDropListData]="selectedCaption" class="example-list add-caption "
-            (cdkDropListDropped)="dropHandler($event)">
-            <div class="example-box" *ngFor="let item of selectedCaption">{{item.captionLabel}}</div>
-          </div>
-
         </div>
-
       </div>
 
 
       <div class="stu-activity-footer-info justify-content-end">
         <a href="javascript:void(0)" class="prev me-4" (click)="goBack()"> <i class="bi bi-chevron-left"></i>
           Previous</a>
-        <a href="javascript:void(0)" class="next" (click)="goNext()">Next <i class="bi bi-chevron-right"
-            ></i></a>
+        <a href="javascript:void(0)" class="next" (click)="goNext()">Next <i class="bi bi-chevron-right"></i></a>
       </div>
     </section>
   </div>
 </div>
-
-
