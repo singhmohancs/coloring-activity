@@ -1,5 +1,5 @@
 
-
+@import "../../../../scss/variables/app";
 :host{
 
   height:100%;
@@ -11,4 +11,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+
+
+.intro-img{
+  border:1px solid $light-300;
+  padding:rem(10px);
+  img{
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+  }
 }
