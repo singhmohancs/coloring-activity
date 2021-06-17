@@ -48,15 +48,6 @@
   }
 }
 
-.stu-activity-row {
-  &:not(:last-child) {
-    margin-bottom: rem(20px);
-  }
-
-  &:last-child(n+1) {
-    margin-bottom: 0;
-  }
-}
 
 
 .stu-story-steps {
