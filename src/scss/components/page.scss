@@ -67,10 +67,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: rem(30px);
+  margin-top: rem(40px);
 
   a {
     font-weight: 600;
+  }
+  .btn{
+    max-width:140px;
+    min-width:100px;
+  
+    &:not(:last-child){
+      margin-right:rem(10px);
+    }
   }
 }
 
