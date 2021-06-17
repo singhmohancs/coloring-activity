@@ -4,37 +4,41 @@ body {
 
 	background: transparent;
 	font-family: $font-family-sans-serif !important;
-	font-size: 0.875em !important;
+    font-size: rem(14px) !important;
 	color:$black !important;
+	height:100vh;
 
 }
-html,body{
-	height:100%;
+html, body
+{
+	min-height:100%;
 }
 
 
 
 .main-wrapper{
-	height:100vh;
-
-	@media screen and(max-width:991px)and(min-width:320px){
+	min-height:100vh;
 	height:100%;
-
+	@media screen and(max-width:991px)and(min-width:320px){
+		max-width:100%;
+		padding:0 rem(16px);
 	}
-
+}
 
 	.container{
-		@media screen and(max-width:991px)and(min-width:320px){
+	height: 100%;
+	
+		@media screen and(max-width:1024px)and(min-width:320px){
 			max-width:100%;
-			padding:0 rem(16px);
+			padding:0 rem(20px) !important;
 		}
 	}
 
 
-}
+
 ::-webkit-scrollbar {
-	width: px-rem(5px) !important;
-	height: px-rem(8px);
+	width: rem(5px) !important;
+	height: rem(8px);
 
 }
 
@@ -60,6 +64,7 @@ a{
 }
 
 .btn{
+	font-size: rem(14px);
 	&:focus{
 		outline:none;
 		box-shadow: none !important;
@@ -69,4 +74,20 @@ a{
 
 .prev,.next{
 	font-weight:600;
+}
+
+h1{
+	@media screen and(max-width:991px)and(min-width:320px){
+	font-size:rem(22px) !important;
+	}
+
+}
+h2{
+	@media screen and(max-width:991px)and(min-width:320px){
+	font-size:rem(18px) !important;
+	}
+	@media screen and(max-width:1024px)and(min-width:992px){
+		font-size:rem(20px) !important;
+		}
+
 }
