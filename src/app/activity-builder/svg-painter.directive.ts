@@ -1,4 +1,5 @@
 import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
+import { ActivityBuilderService } from './activity-builder.service';
 
 @Directive({ selector: '[svgPainter]' })
 export class SvgPainterDirective {
@@ -9,28 +10,29 @@ export class SvgPainterDirective {
 
   private element: ElementRef;
   private children: HTMLElement[] = [];
-  constructor(el: ElementRef) {
+  constructor(
+    el: ElementRef,
+    public activityBuilderService: ActivityBuilderService
+    ) {
     this.element = el;
   }
 
-  ngOninit(): void {
-
-  }
-
-  ngOnChanges(changes: any) {
-    console.log('changes detection', changes);
-    //this.repaintSvg();
-    if (changes.hasOwnProperty('svgPainter') && changes.svgPainter.currentValue) {
+  ngOnInit(): void {
+    this.activityBuilderService.bindSvgClick.subscribe(data => {
       this.svgClickHandler();
-    }
+    });
 
-    this.repaintSvg();
+    this.activityBuilderService.bindSvgRepaint.subscribe(data => {
+      this.repaintSvg();
+    });
   }
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     //@todo remove event listner.
+    //this.activityBuilderService.bindSvgClick.unsubscribe();
+    //this.activityBuilderService.bindSvgRepaint.unsubscribe();
   }
 
   /**
@@ -53,7 +55,6 @@ export class SvgPainterDirective {
   }
 
   private repaintSvg() {
-    console.log('repaint');
     if (this.activity && Object.keys(this.activity).length) {
       for (const k in this.activity) {
         if (Object.prototype.hasOwnProperty.call(this.activity, k)) {

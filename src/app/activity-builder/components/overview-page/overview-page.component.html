@@ -28,14 +28,12 @@
           <div class="activity-img mb-3">
             <div class="activity-story-img-info">
 
-            <app-svg-painter [activity]='activity' style='max-width:200px;'></app-svg-painter>
+            <app-svg-painter [activity]='activity' [activityConfig]="activitiesConfig[activity.order]" style='max-width:200px;'></app-svg-painter>
 
           </div>
           </div>
           <div class="stu-activity-content-area">
-            <p>Build in your soul an interior solitude that you
-              can keep everywhere. There, live in God.
-            </p>
+            <p>{{activitiesConfig[activity.order] ? (activitiesConfig[activity.order].caption ? activitiesConfig[activity.order].caption.captionLabel : '') : ''}}</p>
           </div>
         </div>
       </div>
@@ -46,7 +44,9 @@
         <button class="p-2 btn btn-sm btn-outline-primary " type="button">Save </button>
 
       </div>
-     
+      <div class="d-flex justify-content-end">
+        <a href="javascript:void(0)" (click)="goBack()" class="prev "> <i class="bi bi-chevron-left"></i> Previous</a>
+      </div>
     </section>
   </div>
 </div>
