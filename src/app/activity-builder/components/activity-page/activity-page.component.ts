@@ -12,8 +12,6 @@ import SwiperCore, {
   EffectFade,
   Virtual,
 } from 'swiper/core';
-import { SwiperComponent } from "swiper/angular";
-
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 
@@ -26,7 +24,6 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
   encapsulation: ViewEncapsulation.None,
 })
 export class ActivityPageComponent implements OnInit {
-  @ViewChild("swiperRef", { static: false }) swiperRef?: SwiperComponent;
   public appConfig: any;
   public selectedCaption: any;
   public selectedColor: string | undefined;
@@ -52,7 +49,7 @@ export class ActivityPageComponent implements OnInit {
 
   ngOnInit() {
     this.navigation = {
-      showNavigation :  false,
+      showNavigation: false,
       nextEl: '.button-next',
       prevEl: '.button-prev',
     };
@@ -153,41 +150,25 @@ export class ActivityPageComponent implements OnInit {
     this.saveData(this.activities);
   }
 
-  /**
-   * helper function
-   * @return void
-   */
-  public goBack() {
-    if (this.activityId === 1) {
-      this.router.navigateByUrl('/activity-builder');
-      return;
-    }
-    this.router.navigateByUrl(`activity-builder/activity/${this.activityId - 1}`);
-
-  }
-
   public gotoReview() {
     this.router.navigateByUrl('/activity-builder/overview');
   }
 
 
   goto(dir: string) {
-    if (this.swiperRef) {
-      if (dir === 'next') {
+    if (dir === 'next') {
 
-        if(this.currentPage >= this.activityPageCount){
-          this.currentPage = this.activityPageCount;
-        }else{
-           this.currentPage = this.currentPage+1;
-        }
-      } else if (dir === 'prev') {
-        if(this.currentPage <= this.activityPageCount){
-          this.currentPage = this.currentPage-1;
-        }else{
-           this.currentPage = 1;
-        }
+      if (this.currentPage >= this.activityPageCount) {
+        this.currentPage = this.activityPageCount;
+      } else {
+        this.currentPage = this.currentPage + 1;
       }
-      //this.swiperRef.swiperRef.slideTo(this.currentPage - 1, 0)
+    } else if (dir === 'prev') {
+      if (this.currentPage <= this.activityPageCount) {
+        this.currentPage = this.currentPage - 1;
+      } else {
+        this.currentPage = 1;
+      }
     }
   }
 

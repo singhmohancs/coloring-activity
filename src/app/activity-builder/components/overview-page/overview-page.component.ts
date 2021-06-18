@@ -1,11 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppProvider } from 'src/app/app.provider';
+// import Swiper core and required modules
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectFade,
+  Virtual,
+} from 'swiper/core';
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 
 @Component({
   selector: 'app-overview-page',
   templateUrl: './overview-page.component.html',
-  styleUrls: ['./overview-page.component.scss']
+  styleUrls: ['./overview-page.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class OverviewPageComponent implements OnInit {
   public activitiesConfig:any;

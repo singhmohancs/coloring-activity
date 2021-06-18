@@ -1,5 +1,5 @@
 <div style="display:flex;flex-direction:column;height:100vh">
-<div style="height: calc(100vh - 80px);"><swiper #swiperRef [navigation]="navigation"  [virtual]="true" class="mySwiper">
+<div style="height: calc(100vh - 80px);"><swiper [navigation]="navigation"  [virtual]="true" class="mySwiper">
   <ng-container *ngFor="let activity of activityPages; let i=index">
     <ng-template swiperSlide>
       <section class="container">
