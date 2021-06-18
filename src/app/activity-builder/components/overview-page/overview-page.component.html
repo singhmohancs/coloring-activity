@@ -20,7 +20,7 @@
       </div>
 
       <div class="row  stu-story-info ">
-        <div class="col-md-6 col-lg-4" *ngFor="let activity of activities; let i = index" >
+        <div class="col-md-6 col-lg-4" *ngFor="let activity of activities; let i = index">
           <div class="stu-activity-header mb-2 pb-0 d-flex align-items-center justify-content-center">
             <h5>
               Page {{i+1}}</h5>
@@ -28,23 +28,25 @@
           <div class="activity-img mb-3">
             <div class="activity-story-img-info">
 
-            <app-svg-painter [activity]='activity' [activityConfig]="activitiesConfig[activity.order]" style='max-width:200px;'></app-svg-painter>
+              <app-svg-painter [activity]='activity' [activityConfig]="activitiesConfig[activity.order]"
+                style='max-width:200px;'></app-svg-painter>
 
-          </div>
+            </div>
           </div>
           <div class="stu-activity-content-area">
-            <p>{{activitiesConfig[activity.order] ? (activitiesConfig[activity.order].caption ? activitiesConfig[activity.order].caption.captionLabel : '') : ''}}</p>
+            <p>{{activitiesConfig[activity.order] ? (activitiesConfig[activity.order].caption ?
+              activitiesConfig[activity.order].caption.captionLabel : '') : ''}}</p>
           </div>
         </div>
       </div>
-      <div class="stu-activity-footer-info mb-4 stu-story-footer justify-content-center">
-        <button type="button" class="btn btn-outline-primary prev" > 
+      <div class="stu-activity-footer-info mb-4 stu-story-footer justify-content-space-between">
+        <button type="button" class="btn btn-outline-primary prev" (click)="goBack()">
           Previous</button>
-        <button class="p-2  btn btn-sm btn-primary " type="button">Print </button>
-        <button class="p-2 btn btn-sm btn-outline-primary " type="button">Save </button>
-
+        <div>
+          <button class="p-2  btn btn-sm btn-primary " type="button">Print </button>
+          <button class="p-2 btn btn-sm btn-outline-primary " type="button">Save </button>
+        </div>
       </div>
-   
     </section>
   </div>
 </div>

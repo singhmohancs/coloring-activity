@@ -28,7 +28,7 @@
     margin-bottom: rem(10px);
     font-weight: 700;
 
-   
+
   }
 
   h2,
@@ -87,8 +87,8 @@
         margin-bottom:rem(20px);
       }
     }
-  
-  
+
+
     &:not(:last-child){
       margin-right:rem(10px);
     }
@@ -139,8 +139,8 @@
 
 
 .stu-activity-sec {
-  
-  
+
+
   .stu-activity-header {
     padding: 0;
   }
@@ -211,7 +211,7 @@
     padding-top: rem(20px);
     min-height: 100vh;
   }
-  
+
 
   .stu-activity-header {
     &.story-heading{
@@ -221,14 +221,14 @@
           margin-bottom: 0;
         }
       }
-    
+
     }
     h5 {
       font-size: rem(20px);
       @media screen and(max-width: 991px)and(min-width:320px) {
         font-size: rem(16px);
       }
-    
+
     }
   }
 

@@ -1,0 +1,28 @@
+@import "../../../../scss/variables/app";
+
+.caption-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    align-items: center;
+    background: $light-200;
+    border: 1px solid $light-300;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-size: rem(14px);
+    @media screen and(max-width: 1024px)and(min-width:320px) {
+    font-size:rem(13px);
+    }
+    &.active,
+    &:hover {
+      border-color: $light-green;
+      background: $light-400;
+    }
+  }
+
+}

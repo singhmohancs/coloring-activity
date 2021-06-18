@@ -1,25 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { moveItemInArray, copyArrayItem } from '@angular/cdk/drag-drop';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { AppProvider } from 'src/app/app.provider';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Color } from '../color-picker/color.model';
+
+// import Swiper core and required modules
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectFade,
+  Virtual,
+} from 'swiper/core';
+import { SwiperComponent } from "swiper/angular";
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
+
+
 
 @Component({
   selector: 'app-activity-page',
   templateUrl: './activity-page.component.html',
-  styleUrls: ['./activity-page.component.scss']
+  styleUrls: ['./activity-page.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ActivityPageComponent implements OnInit {
+  @ViewChild("swiperRef", { static: false }) swiperRef?: SwiperComponent;
   public appConfig: any;
   public selectedCaption: any;
-  public selectedColor: string = '';
+  public selectedColor: string | undefined;
   private activityId: number = 1;
-  private activities: any = {};
+  public activities: any = {};
   public activity: any;
-  private activityPageCount: number = 0;
+  public activityPageCount: number = 0;
+  public currentPage: number = 1;
   public colors;
   public captions: any[] = [];
   public svgUrl: any;
-  public activityConfig:any = {};
+  public activityConfig: any = {};
+  public activityPages: any[] = [];
+  public navigation: any = {};
 
   constructor(
     private appProvider: AppProvider,
@@ -30,6 +51,12 @@ export class ActivityPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.navigation = {
+      showNavigation :  false,
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    };
+    this.activityPages = this.appConfig.coloringPages.pages;
     this.selectedCaption = {};
     this.activatedRoute.params.subscribe(params => {
       this.activityId = parseInt(params.id);
@@ -66,15 +93,15 @@ export class ActivityPageComponent implements OnInit {
 
   }
   /**
-   * @name selectColor
+   * @name onColorSelect
    * @description a click handler to select and save selected color in selectedColor variable.
    *
    * @param color
    * @public
    * @return void
    */
-  public selectColor(color: string) {
-    this.selectedColor = color;
+  public onColorSelect(colorObj: Color) {
+    this.selectedColor = colorObj.color;
   }
 
   /**
@@ -90,7 +117,7 @@ export class ActivityPageComponent implements OnInit {
    */
   public onSvgClicked(data: { element: HTMLElement, color: string }) {
     if (!data.color) return;
-    const id:any = data.element.getAttribute('id');
+    const id: any = data.element.getAttribute('id');
     if (!this.activities[this.activityId]) {
       this.activities[this.activityId] = {};
     }
@@ -109,7 +136,7 @@ export class ActivityPageComponent implements OnInit {
     localStorage.setItem('activities', activities);
   }
   /**
-   * selectCaption
+   * onCaptionSelect
    * @description select caption and store in selectedCaption
    *
    * @param {*} caption
@@ -117,7 +144,7 @@ export class ActivityPageComponent implements OnInit {
    *
    * @return void
    */
-  public selectCaption(caption: any){
+  public onCaptionSelect(caption: any) {
     this.selectedCaption = caption;
     if (!this.activities[this.activityId]) {
       this.activities[this.activityId] = {};
@@ -139,12 +166,29 @@ export class ActivityPageComponent implements OnInit {
 
   }
 
-  public goNext() {
-    if (this.activityId === this.activityPageCount) {
-      this.router.navigateByUrl('/activity-builder/overview');
-      return;
+  public gotoReview() {
+    this.router.navigateByUrl('/activity-builder/overview');
+  }
+
+
+  goto(dir: string) {
+    if (this.swiperRef) {
+      if (dir === 'next') {
+
+        if(this.currentPage >= this.activityPageCount){
+          this.currentPage = this.activityPageCount;
+        }else{
+           this.currentPage = this.currentPage+1;
+        }
+      } else if (dir === 'prev') {
+        if(this.currentPage <= this.activityPageCount){
+          this.currentPage = this.currentPage-1;
+        }else{
+           this.currentPage = 1;
+        }
+      }
+      //this.swiperRef.swiperRef.slideTo(this.currentPage - 1, 0)
     }
-    this.router.navigateByUrl(`activity-builder/activity/${this.activityId + 1}`);
   }
 
 
