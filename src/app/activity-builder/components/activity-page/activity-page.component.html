@@ -1,5 +1,5 @@
 <div style="display:flex;flex-direction:column;height:100vh">
-<div style="height: calc(100vh - 80px);"><swiper [navigation]="navigation"  [virtual]="true" class="mySwiper">
+<div style="height: calc(100vh - 80px);"><swiper [navigation]="navigation"  [virtual]="true" class="mySwiper" (slideChange) = "onSlideChange($event)">
   <ng-container *ngFor="let activity of activityPages; let i=index">
     <ng-template swiperSlide>
       <section class="container">
@@ -38,9 +38,9 @@
 </swiper></div>
 <div style="height: 100px">
   <div class="stu-activity-footer-info justify-content-center">
-    <button type="button" class="btn btn-primary prev button-prev" (click)="goto('prev')"> <i class="bi bi-chevron-left"></i>
+    <button type="button" class="btn btn-primary prev button-prev"> <i class="bi bi-chevron-left"></i>
       Previous</button>
-    <span [hidden]="currentPage == activityPageCount"><button type="button" class="next btn btn-outline-primary button-next" (click)="goto('next')">Next <i class="bi bi-chevron-right" ></i></button></span>
+    <span [hidden]="currentPage == activityPageCount"><button type="button" class="next btn btn-outline-primary button-next">Next <i class="bi bi-chevron-right" ></i></button></span>
 
     <span [hidden]="currentPage !== activityPageCount"><button type="button" class="next btn btn-outline-primary button-next" (click)="gotoReview()">Review Activities <i class="bi bi-chevron-right" ></i></button></span>
   </div>

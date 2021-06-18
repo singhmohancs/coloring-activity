@@ -154,22 +154,8 @@ export class ActivityPageComponent implements OnInit {
     this.router.navigateByUrl('/activity-builder/overview');
   }
 
-
-  goto(dir: string) {
-    if (dir === 'next') {
-
-      if (this.currentPage >= this.activityPageCount) {
-        this.currentPage = this.activityPageCount;
-      } else {
-        this.currentPage = this.currentPage + 1;
-      }
-    } else if (dir === 'prev') {
-      if (this.currentPage <= this.activityPageCount) {
-        this.currentPage = this.currentPage - 1;
-      } else {
-        this.currentPage = 1;
-      }
-    }
+  onSlideChange(data: any){
+    this.currentPage = data.activeIndex+1
   }
 
 
