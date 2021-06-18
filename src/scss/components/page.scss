@@ -68,13 +68,26 @@
   align-items: center;
   justify-content: space-between;
   margin-top: rem(40px);
+  @media screen and(max-width: 567px)and(min-width:320px) {
+    flex-direction: column;
+  }
+
 
   a {
     font-weight: 600;
   }
   .btn{
-    max-width:140px;
+    max-width:150px;
     min-width:100px;
+    @media screen and(max-width: 567px)and(min-width:320px) {
+      max-width: 170px;
+      min-width:170px;
+      &:not(:last-child){
+        margin-right:0 !important;
+        margin-bottom:rem(20px);
+      }
+    }
+  
   
     &:not(:last-child){
       margin-right:rem(10px);
