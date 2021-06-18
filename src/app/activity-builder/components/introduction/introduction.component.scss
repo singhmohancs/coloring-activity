@@ -18,9 +18,16 @@
 .intro-img{
   border:1px solid $light-300;
   padding:rem(10px);
+  @media screen and(max-width: 767px)and(min-width:320px) {
+   margin-top:rem(20px);
+  }
   img{
     width: 100%;
     max-width: 500px;
     height: 450px;
+    @media screen and(max-width: 767px)and(min-width:320px) {
+  height:100%;
+  max-width: 100%;
+     }
   }
 }

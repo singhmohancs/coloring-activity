@@ -146,6 +146,9 @@
   }
 
   .stu-activity-right-col {
+    @media screen and(max-width: 767px)and(min-width:320px) {
+      margin-top: rem(15px);
+    }
     .stu-activity-content-area {
       @media screen and(max-width: 991px)and(min-width:320px) {
         margin-bottom: rem(15px);
@@ -243,16 +246,7 @@
     }
   }
 
-  .stu-story-footer {
-    .btn {
-      width: 100%;
-      max-width: 120px;
 
-      &:not(:last-child) {
-        margin-right: rem(15px);
-      }
-    }
-  }
 }
 
 .stu-story-steps,
