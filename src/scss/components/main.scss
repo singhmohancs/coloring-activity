@@ -2,6 +2,7 @@
 
 body {
 
+  background: transparent;
   font-family: $font-family-sans-serif !important;
   font-size: rem(14px) !important;
   color: $black !important;
@@ -168,9 +169,6 @@ h2 {
 }
 
 .swiper-wrapper {
-  transition: 2s ease-in-out !important;
+  transition: 1s ease-in-out !important;
 
-  @media screen and(max-width: 767px)and(min-width:320px) {
-    transition: 1s ease-in-out !important;
-  }
 }
