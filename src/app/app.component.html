@@ -4,6 +4,10 @@
   </ng-template>
   <ng-container *ngFor="let activity of activityPages; let i=index">
     <ng-template swiperSlide>
+      <div class="activity-page-content">
+      <div class="container">
+
+   
 
         <div class="row stu-activity-row ">
           <div class="col-md-12 col-lg-5 col-xl-4">
@@ -19,7 +23,7 @@
             <app-color-picker [colors]="colors" (onSelect)="onColorSelect($event)" (onLoad)="onColorSelect($event)">
             </app-color-picker>
 
-            <div class="stu-activity-right-col">
+            <div class="stu-activity-right-col ">
               <div
                 class="stu-activity-header caption-heading pt-2  pb-2 d-flex align-items-start justify-content-start">
                 <h2>Select Caption</h2>
@@ -40,7 +44,8 @@
           </div>
 
         </div>
-
+      </div>
+      </div>
     </ng-template>
 
   </ng-container>
