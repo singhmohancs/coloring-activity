@@ -17,10 +17,10 @@ export class ActivityCaptionComponent implements OnInit {
     "order": 2,
     "captionLabel": "God expects great things from you if you let him handle your."
   }];
-  public selectedCaption: Caption;
+  public selectedCaption: Caption|null;
 
   constructor() {
-    this.selectedCaption = this.captions[0];
+    this.selectedCaption = null
   }
 
   ngOnInit() {
