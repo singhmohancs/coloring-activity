@@ -22,6 +22,7 @@
       <div class="row  stu-story-info ">
         <ng-container *ngFor="let activity of activities; let i = index">
           <div class="col-lg-3">
+            <div style='max-width:200px; ' class="mx-auto">
             <div class="stu-activity-header mb-2 pb-0 d-flex align-items-center justify-content-center">
               <h5>
                 Page {{i+1}}</h5>
@@ -30,10 +31,11 @@
               <div class="activity-story-img-info">
 
                 <app-svg-painter class="svg-painter" [activity]='activity'
-                  [activityConfig]="activitiesConfig[activity.order]" style='max-width:200px;'></app-svg-painter>
+                  [activityConfig]="activitiesConfig[activity.order]" ></app-svg-painter>
 
               </div>
             </div>
+          </div>
             <div class="stu-activity-content-area">
               <p>{{activitiesConfig[activity.order] ? (activitiesConfig[activity.order].caption ?
                 activitiesConfig[activity.order].caption.captionLabel : '') : ''}}</p>
@@ -44,7 +46,7 @@
       <div class="stu-activity-footer-info mb-4 stu-story-footer justify-content-space-between">
         <button type="button" class="btn btn-outline-primary prev" (click)="goBack()">
           Previous</button>
-        <div>
+        <div class="footer-right-btn-info">
           <button class="p-2  btn btn-sm btn-primary " type="button">Print </button>
           <button class="p-2 btn btn-sm btn-outline-primary " type="button">Save </button>
         </div>

@@ -1,12 +1,15 @@
-<div style="display:flex;flex-direction:column;height:100vh">
-<div style="height: calc(100vh - 80px);"><swiper [navigation]="navigation"  [virtual]="true" class="mySwiper" (slideChange) = "onSlideChange($event)">
+<div style="display:flex;flex-direction:column;min-height:100vh;height:100%">
+<div class="activity-page-content"><swiper [navigation]="navigation"  [virtual]="true" class="mySwiper" (slideChange) = "onSlideChange($event)">
   <ng-container *ngFor="let activity of activityPages; let i=index">
     <ng-template swiperSlide>
       <section class="container">
         <div class="row stu-activity-row ">
-          <div class="col-md-12 col-lg-4">
+          <div class="col-md-12 col-lg-5 col-xl-4">
+            <div class="activity-left-col">
+
+        
             <div
-              class="stu-activity-header align-items-md-center justify-content-md-center mb-4 pb-0 d-flex flex-column align-items-lg-start justify-content-lg-start">
+              class="stu-activity-header pt-0 align-items-md-center justify-content-md-center mb-4 pb-0 d-flex flex-column align-items-lg-start justify-content-lg-start">
               <h2>Color It!</h2>
               <p>Use the colors below to color the coloring page!</p>
             </div>
@@ -25,26 +28,30 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-8">
-            <div class="stu-activity-right-col">
+        </div>
+          <div class="col-md-12 col-lg-7 col-xl-8">
+            <div class="stu-activity-right-col activity-right-img-col">
               <app-svg-painter [activity]='activity' [activityConfig]="activityConfig" [selectedColor]='selectedColor'
                 (onSvgClicked)="onSvgClicked($event)" ></app-svg-painter>
             </div>
+            <div class="stu-activity-footer-info pb-4 justify-content-center">
+              <button type="button" class="btn btn-primary prev button-prev"> <i class="bi bi-chevron-left"></i>
+                Previous</button>
+              <span [hidden]="currentPage == activityPageCount"><button type="button" class="next btn btn-outline-primary button-next">Next <i class="bi bi-chevron-right" ></i></button></span>
+          
+              <span [hidden]="currentPage !== activityPageCount"><button type="button" class="next btn btn-outline-primary button-next" (click)="gotoReview()">Review Activities <i class="bi bi-chevron-right" ></i></button></span>
+            </div>
+            <div>
+            
+            
+            </div>
           </div>
+        
         </div>
       </section>
     </ng-template>
   </ng-container>
 </swiper></div>
-<div style="height: 100px">
-  <div class="stu-activity-footer-info justify-content-center">
-    <button type="button" class="btn btn-primary prev button-prev"> <i class="bi bi-chevron-left"></i>
-      Previous</button>
-    <span [hidden]="currentPage == activityPageCount"><button type="button" class="next btn btn-outline-primary button-next">Next <i class="bi bi-chevron-right" ></i></button></span>
 
-    <span [hidden]="currentPage !== activityPageCount"><button type="button" class="next btn btn-outline-primary button-next" (click)="gotoReview()">Review Activities <i class="bi bi-chevron-right" ></i></button></span>
-  </div>
-
-</div>
 </div>
 

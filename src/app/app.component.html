@@ -1,8 +1,8 @@
-<swiper [navigation]="true" class="mySwiper">
+<swiper  [pagination]="{ clickable: true }"  [navigation]="true" class="mySwiper">
   <ng-template swiperSlide>
     <app-introduction></app-introduction>
   </ng-template>
-  <ng-template swiperSlide>
+  <ng-template swiperSlide >
     <app-activity-page></app-activity-page>
   </ng-template>
   <ng-template swiperSlide>
