@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { AppProvider } from 'src/app/app.provider';
 import { Color } from '../color-picker/color.model';
+import { SwiperComponent } from "swiper/angular";
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -20,6 +21,8 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
   styleUrls: ['./activity-page.component.scss'],
 })
 export class ActivityPageComponent implements OnInit {
+  @ViewChild("swiperRef", { static: false }) sliderRef?: SwiperComponent;
+
   public appConfig: any;
   public selectedCaption: any;
   public selectedColor: string | undefined;
@@ -150,6 +153,20 @@ export class ActivityPageComponent implements OnInit {
 
   onSlideChange(data: any){
     this.currentPage = data.activeIndex+1
+  }
+
+  changeSlide(dir: any){
+    if(this.sliderRef){
+      if(dir === 'next'){
+        this.sliderRef.swiperRef.slideNext()
+      }
+
+      if(dir === 'prev'){
+        this.sliderRef.swiperRef.slidePrev()
+      }
+
+    }
+
   }
 
 
