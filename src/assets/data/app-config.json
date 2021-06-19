@@ -83,7 +83,46 @@
         "order": 16,
         "name": "teal",
         "color": "#0D98BA"
+      }, 
+      {
+        "order": 17,
+        "name": "orange",
+        "color": "#FF5722"
+      },
+      {
+        "order": 18,
+        "name": "light-blue",
+        "color": "#03A9F4"
+      },
+      {
+        "order": 19,
+        "name": "dark-pink",
+        "color": "#E91E63"
+      },
+      {
+        "order": 20,
+        "name": "white",
+        "color": "#FFFFFF"
+      },
+      {
+        "order": 21,
+        "name": "sky-blue",
+        "color": "#2AE2F4"
+      },
+      {
+        "order": 22,
+        "name": "light-gray",
+        "color": "#F2F0F0"
+      },
+    
+      {
+        "order": 23,
+        "name": "dark-green",
+        "color": " #42692F"
       }
+
+
+    
     ],
     "pages": [
       {

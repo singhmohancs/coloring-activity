@@ -2,96 +2,175 @@
 
 body {
 
-	background: transparent;
-	font-family: $font-family-sans-serif !important;
-    font-size: rem(14px) !important;
-	color:$black !important;
-	height:100vh;
+  font-family: $font-family-sans-serif !important;
+  font-size: rem(14px) !important;
+  color: $black !important;
+  height: 100vh;
 
 }
-html, body
-{
-	min-height:100%;
+
+html,
+body {
+  min-height: 100%;
 }
 
 
 
-.main-wrapper{
-	min-height:100vh;
-	height:100%;
-	@media screen and(max-width:991px)and(min-width:768px){
-		max-width:100%;
-		padding:0 rem(16px);
-	}
-	@media screen and(max-width:767px)and(min-width:320px){
-		max-width:100%;
-		
-	}
+.main-wrapper {
+  min-height: 100vh;
+  height: 100%;
+
+  @media screen and(max-width:991px)and(min-width:768px) {
+    max-width: 100%;
+    padding: 0 rem(16px);
+  }
+
+  @media screen and(max-width:767px)and(min-width:320px) {
+    max-width: 100%;
+
+  }
 }
 
-	.container{
-	height: 100%;
-	
-		@media screen and(max-width:1024px)and(min-width:320px){
-			max-width:100%;
-			padding:0 rem(20px) !important;
-		}
-	}
+.container {
+  height: 100%;
+
+  @media screen and(max-width:1024px)and(min-width:768px) {
+    max-width: 100%;
+    padding: 0 rem(25px) !important;
+  }
+
+  @media screen and(max-width:767px)and(min-width:320px) {
+    max-width: 100%;
+    padding: 0 rem(20px) !important;
+  }
+}
 
 
 
 ::-webkit-scrollbar {
-	width: rem(5px) !important;
-	height: rem(8px);
+  width: rem(5px) !important;
+  height: rem(8px);
 
 }
 
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $light-gray;
+  background-color: $light-gray;
 
 }
-p{
-	&:not(:last-child){
-		margin-bottom: rem(20px);
-	}
-	&:last-child{
-		margin-bottom: rem(0px);
-	}
-}
-a{
-	color:$primary !important;
-	text-decoration: none !important;
+
+p {
+  &:not(:last-child) {
+    margin-bottom: rem(20px);
+  }
+
+  &:last-child {
+    margin-bottom: rem(0px);
+  }
 }
 
-.btn{
-	font-size: rem(14px);
-	&:focus{
-		outline:none;
-		box-shadow: none !important;
-	}
+a {
+  color: $primary !important;
+  text-decoration: none !important;
+}
+
+.btn {
+  font-size: rem(14px);
+
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
 }
 
 
-.prev,.next{
-	font-weight:600;
+.prev,
+.next {
+  font-weight: 600;
 }
 
-h1{
-	@media screen and(max-width:991px)and(min-width:320px){
-	font-size:rem(22px) !important;
-	}
+h1 {
+  @media screen and(max-width:991px)and(min-width:320px) {
+    font-size: rem(22px) !important;
+  }
 
 }
-h2{
-	@media screen and(max-width:991px)and(min-width:320px){
-	font-size:rem(18px) !important;
-	}
-	@media screen and(max-width:1024px)and(min-width:992px){
-		font-size:rem(20px) !important;
-		}
 
+h2 {
+  @media screen and(max-width:991px)and(min-width:320px) {
+    font-size: rem(18px) !important;
+  }
+
+  @media screen and(max-width:1024px)and(min-width:992px) {
+    font-size: rem(20px) !important;
+  }
+
+}
+
+.swiper-button-next {
+  right: 20px !important;
+
+  @media screen and(max-width:767px)and(min-width:320px) {
+    right: 10px !important
+  }
+
+  @media screen and(max-width:1024px)and(min-width:320px) {
+
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+
+
+}
+
+.swiper-button-prev {
+
+  left: 20px !important;
+
+  @media screen and(max-width:1024px)and(min-width:320px) {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+
+  }
+
+  @media screen and(max-width:767px)and(min-width:320px) {
+    left: 10px !important
+  }
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @media screen and(max-width:1024px)and(min-width:320px) {
+    background: $primary;
+    width: 35px !important;
+
+    opacity: 0.70 !important;
+  }
+
+  &:after {
+    color: $primary;
+    font-weight: bold;
+
+    @media screen and(max-width:1024px)and(min-width:320px) {
+      color: $white;
+      font-size: rem(20px) !important;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: 20px;
+}
+
+.swiper-wrapper {
+  transition: 2s ease-in-out !important;
+
+  @media screen and(max-width: 767px)and(min-width:320px) {
+    transition: 1s ease-in-out !important;
+  }
 }

@@ -97,10 +97,7 @@
 
 .color-palettes {
   width: 100%;
-  max-width: rem(400px);
-  @media screen and(max-width: 1024px)and(min-width:992px) {
-    max-width: 100%;
-  }
+ 
 
   @media screen and(max-width: 991px)and(min-width:320px) {
     max-width: 100%;
@@ -116,8 +113,11 @@
     max-width: rem(40px);
     border-radius: 50%;
     height: rem(40px);
-    margin-bottom: rem(15px);
-
+    margin-bottom: rem(20px);
+    box-shadow: 0 0.75rem 6rem rgb(56 65 74 / 22%);
+    -moz-box-shadow:0 0.75rem 6rem rgb(56 65 74 / 22%);
+    -webkit-box-shadow: 0 0.75rem 6rem rgb(56 65 74 / 22%);
+    -o-box-shadow: 0 0.75rem 6rem rgb(56 65 74 / 22%);
     &:first-child {
       @media screen and(max-width: 991px)and(min-width:320px) {
         margin-left: rem(10px);
@@ -184,3 +184,4 @@
     color: $primary;
   }
 }
+
