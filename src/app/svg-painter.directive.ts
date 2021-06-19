@@ -1,6 +1,7 @@
 import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
 import { ActivityBuilderService } from './activity-builder.service';
 
+
 @Directive({ selector: '[svgPainter]' })
 export class SvgPainterDirective {
   @Output() onSvgClicked: EventEmitter<any> = new EventEmitter<any>();

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivityBuilderService } from '../../activity-builder.service';
+import { ActivityBuilderService } from 'src/app/activity-builder.service';
 
 @Component({
   selector: 'app-svg-painter',

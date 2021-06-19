@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<swiper [navigation]="true" class="mySwiper">
+  <ng-template swiperSlide>
+    <app-introduction></app-introduction>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-activity-page></app-activity-page>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-overview-page></app-overview-page>
+  </ng-template>
+</swiper>

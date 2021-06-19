@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppProvider } from 'src/app/app.provider';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Color } from '../color-picker/color.model';
 
 // import Swiper core and required modules
@@ -15,13 +14,10 @@ import SwiperCore, {
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 
-
-
 @Component({
   selector: 'app-activity-page',
   templateUrl: './activity-page.component.html',
   styleUrls: ['./activity-page.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class ActivityPageComponent implements OnInit {
   public appConfig: any;
@@ -40,9 +36,7 @@ export class ActivityPageComponent implements OnInit {
   public navigation: any = {};
 
   constructor(
-    private appProvider: AppProvider,
-    private router: Router,
-    private activatedRoute: ActivatedRoute) {
+    private appProvider: AppProvider) {
     this.appConfig = this.appProvider.appConfig;
     this.colors = this.appConfig.coloringPages.colorOptions;
   }
@@ -55,12 +49,12 @@ export class ActivityPageComponent implements OnInit {
     };
     this.activityPages = this.appConfig.coloringPages.pages;
     this.selectedCaption = {};
-    this.activatedRoute.params.subscribe(params => {
-      this.activityId = parseInt(params.id);
-      this.loadActivity(this.activityId);
-      this.reloadConfig();
-      this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
-    });
+
+    this.activityId = parseInt('1');
+    this.loadActivity(this.activityId);
+    this.reloadConfig();
+    this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
+
   }
 
   private reloadConfig() {
@@ -151,7 +145,7 @@ export class ActivityPageComponent implements OnInit {
   }
 
   public gotoReview() {
-    this.router.navigateByUrl('/activity-builder/overview');
+    //this.router.navigateByUrl('/activity-builder/overview');
   }
 
   onSlideChange(data: any){
