@@ -9,7 +9,6 @@ import { InlineSVGModule } from 'ng-inline-svg';
 
 
 import { IntroductionComponent } from './components/introduction/introduction.component';
-import { ActivityPageComponent } from './components/activity-page/activity-page.component';
 import { OverviewPageComponent } from './components/overview-page/overview-page.component';
 import { SvgPainterDirective } from './svg-painter.directive';
 import { SvgPainterComponent } from './components/svg-painter/svg-painter.component';
@@ -30,7 +29,6 @@ export function appProviderFactory(provider: AppProvider) {
     AppComponent,
     PageNotFoundComponent,
     IntroductionComponent,
-    ActivityPageComponent,
     OverviewPageComponent,
     SvgPainterDirective,
     SvgPainterComponent,

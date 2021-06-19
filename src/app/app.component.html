@@ -2,9 +2,48 @@
   <ng-template swiperSlide>
     <app-introduction></app-introduction>
   </ng-template>
-  <ng-template swiperSlide >
-    <app-activity-page></app-activity-page>
-  </ng-template>
+  <ng-container *ngFor="let activity of activityPages; let i=index">
+    <ng-template swiperSlide>
+
+        <div class="row stu-activity-row ">
+          <div class="col-md-12 col-lg-5 col-xl-4">
+            <div class="activity-left-col">
+
+
+            <div
+              class="stu-activity-header pt-0 align-items-md-center justify-content-md-center mb-4 pb-0 d-flex flex-column align-items-lg-start justify-content-lg-start">
+              <h2>Color It!</h2>
+              <p>Use the colors below to color the coloring page!</p>
+            </div>
+
+            <app-color-picker [colors]="colors" (onSelect)="onColorSelect($event)" (onLoad)="onColorSelect($event)">
+            </app-color-picker>
+
+            <div class="stu-activity-right-col">
+              <div
+                class="stu-activity-header caption-heading pt-2  pb-2 d-flex align-items-start justify-content-start">
+                <h2>Select Caption</h2>
+              </div>
+              <div class="stu-activity-content-area">
+                <app-activity-caption [captions]="captions" (onSelect)="onCaptionSelect($event)"
+                  (onLoad)="onCaptionSelect($event)"></app-activity-caption>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-12 col-lg-7 col-xl-8">
+            <div class="stu-activity-right-col activity-right-img-col">
+              <app-svg-painter [activity]='activity' [activityConfig]="activityConfig" [selectedColor]='selectedColor'
+                (onSvgClicked)="onSvgClicked($event)" ></app-svg-painter>
+            </div>
+
+          </div>
+
+        </div>
+
+    </ng-template>
+
+  </ng-container>
   <ng-template swiperSlide>
     <app-overview-page></app-overview-page>
   </ng-template>
