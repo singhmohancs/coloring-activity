@@ -4,8 +4,7 @@ import { Caption } from './caption.model';
 @Component({
   selector: 'app-activity-caption',
   templateUrl: './activity-caption.component.html',
-  styleUrls: ['./activity-caption.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./activity-caption.component.scss']
 })
 export class ActivityCaptionComponent implements OnInit {
   @Output() onSelect: EventEmitter<any> = new EventEmitter<any>();
