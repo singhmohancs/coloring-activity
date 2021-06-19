@@ -38,7 +38,7 @@ export class ActivityPageComponent implements OnInit {
   public activityConfig: any = {};
   public activityPages: any[] = [];
   public navigation: any = {};
-  public pagination: any = {};
+ 
 
   constructor(
     private appProvider: AppProvider) {
