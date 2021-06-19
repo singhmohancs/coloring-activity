@@ -11,6 +11,7 @@ import SwiperCore, {
   A11y,
   EffectFade,
   Virtual,
+ 
 } from 'swiper/core';
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
@@ -37,6 +38,7 @@ export class ActivityPageComponent implements OnInit {
   public activityConfig: any = {};
   public activityPages: any[] = [];
   public navigation: any = {};
+ 
 
   constructor(
     private appProvider: AppProvider) {
