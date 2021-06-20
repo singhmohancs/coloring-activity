@@ -19,7 +19,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ActivityBuilderService } from './activity-builder.service';
 import { AppShellComponent } from './shell.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ActivityPrintComponent } from './activity-print/activity-print.component';
 
 
 
@@ -37,8 +36,7 @@ export function appProviderFactory(provider: AppProvider) {
     SvgPainterDirective,
     SvgPainterComponent,
     ColorPickerComponent,
-    ActivityCaptionComponent,
-    ActivityPrintComponent
+    ActivityCaptionComponent
    ],
   imports: [
     CommonModule,

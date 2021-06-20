@@ -1,7 +1,7 @@
 <div class="main-wrapper">
   <div class="container">
     <section class="stu-complete-story-sec pt-4 pb-4">
-      <div class="row text-center">
+      <div class="row text-center stu-story-header">
         <div class="col-md-12">
           <div class="stu-activity-header  mb-0">
             <h2>You've Completed Your Story!</h2>
@@ -39,7 +39,7 @@
         </ng-container>
       </div>
       <div class="stu-activity-footer-info mb-4 stu-story-footer justify-content-center">
-        <button class="p-2  btn btn-sm btn-primary " [routerLink]="['/print']"   type="button">Print </button>
+        <button class="p-2  btn btn-sm btn-primary " (click)="printPage()"   type="button">Print </button>
         <button class="p-2 btn btn-sm btn-outline-primary" (click)="downloadJson()" type="button">Save </button>
       </div>
     </section>

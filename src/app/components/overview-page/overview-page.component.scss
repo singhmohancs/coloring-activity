@@ -84,3 +84,48 @@
 
 }
 
+
+
+
+@media print {
+  .row {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .container {
+    max-width: 768px !important;
+    width: 100% !important;
+    padding: 50px 0 0 0 !important;
+    margin: 0 !important;
+  }
+
+  .stu-story-header,
+  .stu-activity-footer-info,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .stu-story-info {
+    flex-direction: column;
+    align-items: start;
+    overflow: auto;
+
+    &.row {
+      display: block;
+    }
+
+    .col-lg-3 {
+      width: 100%;
+      page-break-after: always;
+    }
+
+    .row {
+      display: block;
+    }
+
+    .stu-activity-content-area {
+      max-width: 400px;
+    }
+  }
+}

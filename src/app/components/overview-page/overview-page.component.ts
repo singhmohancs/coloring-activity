@@ -75,4 +75,8 @@ export class OverviewPageComponent implements OnInit {
     saveAs(blob, `${this.appProvider.appConfig.appName}.json`);
   }
 
+  printPage(){
+    window.print();
+  }
+
 }
