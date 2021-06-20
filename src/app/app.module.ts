@@ -17,6 +17,9 @@ import { ActivityCaptionComponent } from './components/activity-caption/activity
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ActivityBuilderService } from './activity-builder.service';
+import { AppShellComponent } from './shell.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ActivityPrintComponent } from './activity-print/activity-print.component';
 
 
 
@@ -26,6 +29,7 @@ export function appProviderFactory(provider: AppProvider) {
 
 @NgModule({
   declarations: [
+    AppShellComponent,
     AppComponent,
     PageNotFoundComponent,
     IntroductionComponent,
@@ -33,20 +37,21 @@ export function appProviderFactory(provider: AppProvider) {
     SvgPainterDirective,
     SvgPainterComponent,
     ColorPickerComponent,
-    ActivityCaptionComponent
-  ],
+    ActivityCaptionComponent,
+    ActivityPrintComponent
+   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     InlineSVGModule.forRoot(),
     SwiperModule,
-    RouterModule.forRoot([])
+    AppRoutingModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
     AppProvider,
     ActivityBuilderService, { provide: APP_INITIALIZER, useFactory: appProviderFactory, deps: [AppProvider], multi: true }],
-  bootstrap: [AppComponent],
+  bootstrap: [AppShellComponent],
 })
 export class AppModule { }

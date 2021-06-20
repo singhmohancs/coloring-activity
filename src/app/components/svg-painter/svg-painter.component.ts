@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivityBuilderService } from 'src/app/activity-builder.service';
+import { Activity } from 'src/app/models/activity.model';
 
 @Component({
   selector: 'app-svg-painter',
@@ -10,7 +11,7 @@ export class SvgPainterComponent implements OnInit {
   @Input() activity: any;
   @Input() selectedColor?: string;
   @Input() activityConfig?: string;
-  @Input() svgPainter?:boolean;
+  @Input() svgPainter?: boolean;
   @Output() onSvgClicked: EventEmitter<any> = new EventEmitter<any>();
 
   public svgUrl: string = '';
@@ -19,27 +20,27 @@ export class SvgPainterComponent implements OnInit {
     private activityBuilderService: ActivityBuilderService
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.activityConfig);
-  }
+  ngOnInit(): void { }
 
-  ngOnChanges(changes: any){
-    if (changes.hasOwnProperty('activity') && changes.activity.currentValue) {
-      this.initializeSvg(this.activity);
+  ngOnChanges(changes: any) {
+    if (changes.hasOwnProperty('activity')) {
+      if (changes['activity'].currentValue != changes['activity'].previousValue) {
+        this.initializeSvg(this.activity);
+      }
     }
   }
 
-  private initializeSvg(activity: any){
+  private initializeSvg(activity: Activity) {
     this.svgUrl = `/assets/svg/Marie${this.activity.order}.svg`;
   }
 
-  public onSVGInserted(data: any){
+  public onSVGInserted(data: any) {
     this.activityBuilderService.bindSvgClick.emit();
     this.activityBuilderService.bindSvgRepaint.emit();
   }
 
-  public svgClicked(data: any){
-      this.onSvgClicked.emit(data);
+  public svgClicked(data: any) {
+    this.onSvgClicked.emit(data);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Color } from '../color-picker/color.model';
+import { Color } from '../../models/color.model';
 
 @Component({
   selector: 'app-color-picker',
@@ -8,7 +8,6 @@ import { Color } from '../color-picker/color.model';
 })
 export class ColorPickerComponent implements OnInit {
   @Output() onSelect: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onLoad: EventEmitter<any> = new EventEmitter<any>();
   @Input() colors: Color[] = [{
     "order": 1,
     "name": "red",
@@ -24,13 +23,11 @@ export class ColorPickerComponent implements OnInit {
     "name": "yellow",
     "color": "#FFFF00"
   }];
-  public selectedColor: Color;
+  public selectedColor: Color | undefined;
   constructor() {
-    this.selectedColor = this.colors[0];
   }
 
   ngOnInit() {
-    if (this.onLoad) this.onLoad.emit(this.selectedColor);
   }
 
   /**

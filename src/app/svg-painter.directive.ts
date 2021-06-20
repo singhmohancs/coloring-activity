@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange, SimpleChanges } from '@angular/core';
 import { ActivityBuilderService } from './activity-builder.service';
 
 
@@ -6,7 +6,7 @@ import { ActivityBuilderService } from './activity-builder.service';
 export class SvgPainterDirective {
   @Output() onSvgClicked: EventEmitter<any> = new EventEmitter<any>();
   @Input('selectedColor') selectedColor?: any = '#ffffff';
-  @Input('activity') activity?: any = {};
+  @Input('activity') activitySetting?: any = {};
   @Input('svgPainter') svgPainter?: boolean;
 
   private element: ElementRef;
@@ -14,7 +14,7 @@ export class SvgPainterDirective {
   constructor(
     el: ElementRef,
     public activityBuilderService: ActivityBuilderService
-    ) {
+  ) {
     this.element = el;
   }
 
@@ -27,6 +27,14 @@ export class SvgPainterDirective {
       this.repaintSvg();
     });
   }
+
+ngOnChanges(changes: SimpleChanges){
+  if(changes.hasOwnProperty('activitySetting')){
+    if(changes['activitySetting'].currentValue != changes['activitySetting'].previousValue){
+      this.repaintSvg();
+    }
+  }
+}
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
@@ -56,14 +64,20 @@ export class SvgPainterDirective {
   }
 
   private repaintSvg() {
-    if (this.activity && Object.keys(this.activity).length) {
-      for (const k in this.activity) {
-        if (Object.prototype.hasOwnProperty.call(this.activity, k)) {
-          const color = this.activity[k];
-          const element: any = document.querySelector(`#${k}`);
-          if (element) {
-            element.style.fill = color;
+    if (this.activitySetting && Object.keys(this.activitySetting).length) {
+      for (const k in this.activitySetting) {
+        if (Object.prototype.hasOwnProperty.call(this.activitySetting, k)) {
+          if (k) {
+            const color = this.activitySetting[k];
+            const elements: any = document.querySelectorAll(`.${k}`);
+            elements.forEach((e: HTMLElement) => {
+              if (e) {
+                e.style.fill = color;
+              }
+            })
           }
+
+
         }
       }
     }

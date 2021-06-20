@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChange, ViewEncapsulation } from '@angular/core';
-import { Caption } from './caption.model';
+import { Component, EventEmitter, Input, NgZone, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Caption } from '../../models/caption.model';
 
 @Component({
   selector: 'app-activity-caption',
@@ -8,7 +8,7 @@ import { Caption } from './caption.model';
 })
 export class ActivityCaptionComponent implements OnInit {
   @Output() onSelect: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onLoad: EventEmitter<any> = new EventEmitter<any>();
+  @Input() caption: Caption | undefined;
   @Input() captions: Caption[] = [{
     "order": 1,
     "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
@@ -17,14 +17,22 @@ export class ActivityCaptionComponent implements OnInit {
     "order": 2,
     "captionLabel": "God expects great things from you if you let him handle your."
   }];
-  public selectedCaption: Caption|null;
-
-  constructor() {
-    this.selectedCaption = null
+  public selectedCaption: Caption | undefined;
+  constructor(
+    private zone: NgZone
+  ) {
   }
 
   ngOnInit() {
-    if (this.onLoad) this.onLoad.emit(this.selectedCaption);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes.hasOwnProperty('caption')){
+      if(changes['caption'].currentValue != changes['caption'].previousValue){
+        this.selectedCaption = this.caption;
+
+      }
+    }
   }
 
   /**
@@ -36,7 +44,9 @@ export class ActivityCaptionComponent implements OnInit {
  * @return void
  */
   public selectCaption(caption: Caption) {
-    this.selectedCaption = caption;
+    this.zone.run(() => {
+      this.selectedCaption = caption;
+    });
     if (this.onSelect) this.onSelect.emit(caption);
   }
 

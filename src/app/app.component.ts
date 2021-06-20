@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppProvider } from './app.provider';
-import { Color } from './components/color-picker/color.model';
+import { Color } from './models/color.model';
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -11,6 +11,8 @@ import SwiperCore, {
   EffectFade,
   Virtual,
 } from 'swiper/core';
+import { Activity } from './models/activity.model';
+import { ActivityBuilderService } from './activity-builder.service';
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 
@@ -24,65 +26,60 @@ export class AppComponent implements OnInit {
   public appConfig: any;
   public selectedCaption: any;
   public selectedColor: string | undefined;
-  private activityId: number = 1;
-  public activities: any = {};
+  public activityId: number = 1;
+  public activitiesSettings: any = {};
   public activity: any;
   public activityPageCount: number = 0;
-  public currentPage: number = 1;
   public colors;
   public captions: any[] = [];
-  public svgUrl: any;
   public activityConfig: any = {};
   public activityPages: any[] = [];
-  public navigation: any = {};
+  public currentAcitity: Activity | Object = {};
 
   constructor(
-    private appProvider: AppProvider) {
+    private appProvider: AppProvider,
+    private activityService: ActivityBuilderService) {
     this.appConfig = this.appProvider.appConfig;
     this.colors = this.appConfig.coloringPages.colorOptions;
   }
 
   ngOnInit() {
-    this.navigation = {
-      showNavigation: false,
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
-    };
-    this.activityPages = this.appConfig.coloringPages.pages;
-    this.selectedCaption = {};
-
-    this.activityId = parseInt('1');
-    this.loadActivity(this.activityId);
-    this.reloadConfig();
-    this.svgUrl = `/assets/svg/Marie${this.activityId}.svg`;
-
-  }
-
-  private reloadConfig() {
-    let activities: any = localStorage.getItem('activities') || '';
-    try {
-      activities = JSON.parse(activities);
-    } catch (error) {
-      activities = {};
-    }
-    this.activities = activities;
-    const activity = activities[this.activityId];
-    if (activity && activity['caption']) {
-      this.selectedCaption = activity['caption'];
-      delete activity.caption;
-    }
-    this.activityConfig = activity;
-  }
-
-  private loadActivity(id: any) {
-    const pages = this.appConfig.coloringPages.pages;
-    const activity = pages.find((a: any) => {
-      return a.order == this.activityId;
+    this.activitiesSettings = this.getActivitiesSettings();
+    this.activityPages = this.appConfig.coloringPages.pages.map((p: Activity) => {
+      return new Activity().deserialize(p);
     });
-    this.activityPageCount = pages.length;
-    this.captions = activity.captionOptins;
-    this.activity = activity;
-
+    this.setActivitiesSettings();
+  }
+  /**
+   * getActivitiesSettings
+   * @description read activities user settings from local storage
+   *
+   * @private
+   * @returns
+   * @memberof AppComponent
+   */
+  private getActivitiesSettings() {
+    let activitiesSettings: any = localStorage.getItem('activities') || '';
+    try {
+      activitiesSettings = JSON.parse(activitiesSettings);
+    } catch (error) {
+      activitiesSettings = {};
+    }
+    return activitiesSettings;
+  }
+  /**
+   * setActivitiesSettings
+   * @description get user settings from localStorage settings and set to activity object to repaint the activty SVG element
+   *
+   * @private
+   * @memberof AppComponent
+   */
+  private setActivitiesSettings() {
+    this.activityPages.forEach((activity: Activity) => {
+      if (activity.order && this.activitiesSettings[activity.order]) {
+        activity.settings = this.activitiesSettings[activity.order];
+      }
+    });
   }
   /**
    * @name onColorSelect
@@ -93,7 +90,7 @@ export class AppComponent implements OnInit {
    * @return void
    */
   public onColorSelect(colorObj: Color) {
-    this.selectedColor = colorObj.color;
+    this.selectedColor = colorObj ? colorObj.color : '';
   }
 
   /**
@@ -109,12 +106,25 @@ export class AppComponent implements OnInit {
    */
   public onSvgClicked(data: { element: HTMLElement, color: string }) {
     if (!data.color) return;
-    const id: any = data.element.getAttribute('id');
-    if (!this.activities[this.activityId]) {
-      this.activities[this.activityId] = {};
+    const cssClas = this.getUniqueClass(data.element.getAttribute('class'));
+    if (!this.activitiesSettings[this.activityId]) {
+      this.activitiesSettings[this.activityId] = {};
     }
-    this.activities[this.activityId][id] = data.color;
-    this.saveData(this.activities);
+    this.activitiesSettings[this.activityId][cssClas] = data.color.trim();
+    this.saveData(this.activitiesSettings);
+  }
+
+  private getUniqueClass(cssClass: string | null): string {
+    if (!cssClass) return '';
+    let string_tokens = cssClass.split(' ');
+    string_tokens = string_tokens.filter(token => {
+      return token.startsWith('file-');
+    });
+
+    if (string_tokens.length > 0) {
+      return string_tokens[0];
+    }
+    return '';
   }
   /**
    * @name saveData
@@ -137,19 +147,41 @@ export class AppComponent implements OnInit {
    * @return void
    */
   public onCaptionSelect(caption: any) {
+    if (!caption) return;
     this.selectedCaption = caption;
-    if (!this.activities[this.activityId]) {
-      this.activities[this.activityId] = {};
+    if (!this.activitiesSettings[this.activityId]) {
+      this.activitiesSettings[this.activityId] = {};
     }
-    this.activities[this.activityId]['caption'] = this.selectedCaption;
-    this.saveData(this.activities);
+    this.activitiesSettings[this.activityId]['caption'] = this.selectedCaption;
+
+    this.saveData(this.activitiesSettings);
   }
 
   public gotoReview() {
     //this.router.navigateByUrl('/activity-builder/overview');
   }
 
-  onSlideChange(data: any){
-    this.currentPage = data.activeIndex+1
+  onSlideChange(data: any) {
+    const activity = this.activityPages[data.activeIndex - 1];
+    if (activity) {
+      this.currentAcitity = activity;
+      this.captions = activity.captionOptins;
+      this.activityId = activity.order;
+      if (this.activitiesSettings[this.activityId]) {
+        this.selectedCaption = this.activitiesSettings[this.activityId].caption;
+
+      }
+    } else {
+      this.selectedCaption = null;
+    }
+    this.activityService.onSlideChange.emit(data.activeIndex);
+
+    console.log("this.selectedCaption", this.selectedCaption);
   }
+
+  getCaption(){
+    return this.activitiesSettings[this.activityId]? this.activitiesSettings[this.activityId].caption : null;
+  }
+
+
 }

@@ -1,4 +1,4 @@
 <div class="color-palettes">
   <button class="p-2 btn btn-sm" type="button" *ngFor="let item of colors" (click)="selectColor(item)"
-    [style.backgroundColor]="item.color" [ngClass]="{'color-active': item.color === selectedColor.color}"></button>
+    [style.backgroundColor]="item.color" [ngClass]="{'color-active': item.color === (selectedColor ? selectedColor.color : '')}"></button>
 </div>
