@@ -8,11 +8,14 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class MessageModalComponent{
   @Input() message: any;
-  @Input() type: any;
+  @Input() type: string = '';
   constructor(public activeModal: NgbActiveModal) {}
   closeModal(): void{
     this.activeModal.close();
-    window.location.reload();
+    if(this.type === 'success'){
+      window.location.reload();
+    }
+
   }
 
 }
