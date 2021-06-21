@@ -68,7 +68,7 @@ export class OverviewPageComponent implements OnInit {
   downloadJson(){
     let json:any = {
       data : this.activitiesConfig,
-      appId: this.appProvider.appConfig.appName
+      appId: this.appProvider.appConfig.appId
     };
     json = JSON.stringify(json);
     const blob = new Blob([json], {type: "text/plain;charset=utf-8"});

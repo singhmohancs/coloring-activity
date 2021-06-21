@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AppProvider } from 'src/app/app.provider';
+import { MessageModalComponent } from '../message-modal/message-modal.component';
 
 @Component({
   selector: 'app-introduction',
@@ -6,5 +9,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent {
-  title = 'activity builder introduction';
+  constructor(
+    private appProvider: AppProvider,
+    private modalService: NgbModal
+  ) { }
+
+  /**
+   * onFileUpload
+   * process file content
+   *
+   * @param file
+   */
+  onFileUpload(file: any) {
+    if (!file) return;
+    let message;
+    let type;
+    if (file.appId) {
+      if (this.appProvider.appConfig.appId == file.appId) {
+        if (file.data) {
+          localStorage.setItem('activities', JSON.stringify(file.data));
+          message = "You've successfully imported your coloring book!";
+          type = 'success';
+        } else {
+          message = "This coloring book file is not valid for importing.";
+          type = 'error';
+        }
+      } else {
+        message = "This coloring book file is not valid for importing.";
+        type = 'error';
+      }
+    } else {
+      message = "This coloring book file is not valid for importing.";
+      type = 'error';
+    }
+    const modalRef = this.modalService.open(MessageModalComponent, { centered: true, backdrop: 'static', keyboard: false });
+    modalRef.componentInstance.message = message;
+    modalRef.componentInstance.type = type;
+
+
+  }
 }

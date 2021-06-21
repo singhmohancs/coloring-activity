@@ -1,0 +1,27 @@
+:host {
+  .modal-footer {
+    border: 0;
+  }
+
+  .modal-body {
+    padding-top: 2rem;
+  }
+
+  .modal-container {
+    border: 1px solid transparent;
+
+    &.success {
+      p {
+        color: #0f5132;
+      }
+    }
+
+    &.error {
+      p {
+        color: #842029;
+      }
+
+    }
+  }
+
+}

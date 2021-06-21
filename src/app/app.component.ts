@@ -157,10 +157,6 @@ export class AppComponent implements OnInit {
     this.saveData(this.activitiesSettings);
   }
 
-  public gotoReview() {
-    //this.router.navigateByUrl('/activity-builder/overview');
-  }
-
   onSlideChange(data: any) {
     const activity = this.activityPages[data.activeIndex - 1];
     if (activity) {
@@ -169,14 +165,11 @@ export class AppComponent implements OnInit {
       this.activityId = activity.order;
       if (this.activitiesSettings[this.activityId]) {
         this.selectedCaption = this.activitiesSettings[this.activityId].caption;
-
       }
     } else {
       this.selectedCaption = null;
     }
     this.activityService.onSlideChange.emit(data.activeIndex);
-
-    console.log("this.selectedCaption", this.selectedCaption);
   }
 
   getCaption(){

@@ -1,5 +1,6 @@
 {
   "appName": "Coloring Book Activity",
+  "appId": "coloring-book-first-activity",
   "introPageTitle": "Introduction Title",
   "introPageInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>",
   "coloringPages": {
@@ -83,7 +84,7 @@
         "order": 16,
         "name": "teal",
         "color": "#0D98BA"
-      }, 
+      },
       {
         "order": 17,
         "name": "orange",
@@ -114,7 +115,7 @@
         "name": "light-gray",
         "color": "#F2F0F0"
       },
-    
+
       {
         "order": 23,
         "name": "dark-green",
@@ -122,7 +123,7 @@
       }
 
 
-    
+
     ],
     "pages": [
       {

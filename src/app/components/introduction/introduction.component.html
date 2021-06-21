@@ -1,38 +1,43 @@
 <div class="main-wrapper">
 
-<div class="container">
-  <div class="intro-sec">
-  <div class="row mb-3 mt-3">
-    <div class="col-md-12">
-      <div class="stu-activity-header">
-        <h1 class="">Make your <span>Story!</span></h1>
-     </div>
-    </div>
-
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <p>In this activity, you'll be able to color and build your ouw story of St. Marie of teh Incarnation!</p>
-      <p>For each page of story, you'll color the image and select a caption from the provided captions.</p>
-      <p>Quisque libero metus, condimentum nec, tempor a, commando mollis, manga, Vivamus quies mi. Vestibulum ante ipsum primis in faucibus et ultrices posuere cubilia Curae, Sed aliquam, nisi quies porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p>
-      <p>Etiam ultries nisi vel augue. Nullam dictum felis eu pede mollis pretium. Donec mi odio, faucibus at, scelerisque quis, convallis in nisi.</p>
-      <p>Aenean ut eros et nisi sogittis vestibulum. Fusce commodo aliquam arcu. Fusce a quam.</p>
-      <p>Click the <span class="fw-bold">Next button</span> to get started!</p>
-      <p>Note: if you'd like to complete a previously saved story, use the <span class="fw-bold">Import Story</span> below.</p>
-    </div>
-    <div class="col-md-5">
-
-      <div class="intro-img">
-        <img src="../../../../assets/svg/Marie10.svg"/>
+  <div class="container">
+    <div class="intro-sec">
+      <div class="row mb-3 mt-3">
+        <div class="col-md-12">
+          <div class="stu-activity-header">
+            <h1 class="">Make your <span>Story!</span></h1>
+          </div>
+        </div>
 
       </div>
+      <div class="row">
+        <div class="col-md-7">
+          <p>In this activity, you'll be able to color and build your ouw story of St. Marie of teh Incarnation!</p>
+          <p>For each page of story, you'll color the image and select a caption from the provided captions.</p>
+          <p>Quisque libero metus, condimentum nec, tempor a, commando mollis, manga, Vivamus quies mi. Vestibulum ante
+            ipsum primis in faucibus et ultrices posuere cubilia Curae, Sed aliquam, nisi quies porttitor congue, elit
+            erat euismod orci, ac placerat dolor lectus quis orci.</p>
+          <p>Etiam ultries nisi vel augue. Nullam dictum felis eu pede mollis pretium. Donec mi odio, faucibus at,
+            scelerisque quis, convallis in nisi.</p>
+          <p>Aenean ut eros et nisi sogittis vestibulum. Fusce commodo aliquam arcu. Fusce a quam.</p>
+          <p>Click the <span class="fw-bold">Next button</span> to get started!</p>
+          <p>Note: if you'd like to complete a previously saved story, use the <span class="fw-bold">Import Story</span>
+            below.</p>
+        </div>
+        <div class="col-md-5">
 
-  </div>
-  <div class="stu-activity-footer-info mt-5 pb-4 d-flex justify-content-center">
-      <button type="button" class="btn btn-primary">Import Saved Story</button>
-  </div>
-</div>
-</div>
-</div>
-</div>
+          <div class="intro-img">
+            <img src="../../../../assets/svg/Marie10.svg" />
 
+          </div>
+
+        </div>
+        <div class="stu-activity-footer-info mt-5 pb-4 d-flex justify-content-center">
+          <button type="button" class="btn btn-primary" (click)="fileInput.click()">Import Saved Story
+            <input type="file" #fileInput [fileUploader] name="fileUploader" (onUpload)="onFileUpload($event)" class="visually-hidden" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

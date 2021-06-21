@@ -1,5 +1,5 @@
 import { Directive, ElementRef, EventEmitter, Input, Output, SimpleChange, SimpleChanges } from '@angular/core';
-import { ActivityBuilderService } from './activity-builder.service';
+import { ActivityBuilderService } from '../activity-builder.service';
 
 
 @Directive({ selector: '[svgPainter]' })
@@ -39,9 +39,6 @@ ngOnChanges(changes: SimpleChanges){
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    //@todo remove event listner.
-    //this.activityBuilderService.bindSvgClick.unsubscribe();
-    //this.activityBuilderService.bindSvgRepaint.unsubscribe();
   }
 
   /**
