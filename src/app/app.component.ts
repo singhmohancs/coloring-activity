@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   public activitiesSettings: any = {};
   public activity: any;
   public activityPageCount: number = 0;
-  public colors;
+  public colors: any;
   public captions: any[] = [];
   public activityConfig: any = {};
   public activityPages: any[] = [];

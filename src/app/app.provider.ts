@@ -21,7 +21,7 @@ export class AppProvider {
   resolveDependencies() {
     return new Promise((resolve, reject) => {
       const http = this.injector.get(HttpClient);
-      http.get<any>(`/assets/data/app-config.json`).subscribe((response: any) => {
+      http.get<any>(`./assets/data/app-config.json`).subscribe((response: any) => {
         this.appConfig = response;
         resolve(response);
       });

@@ -72,7 +72,7 @@ export class OverviewPageComponent implements OnInit {
     };
     json = JSON.stringify(json);
     const blob = new Blob([json], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, `${this.appProvider.appConfig.appName}.json`);
+    saveAs(blob, `${this.appProvider.appConfig.appName}.cb`);
   }
 
   printPage(){

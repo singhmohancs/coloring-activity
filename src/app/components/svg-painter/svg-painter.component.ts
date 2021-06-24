@@ -31,7 +31,7 @@ export class SvgPainterComponent implements OnInit {
   }
 
   private initializeSvg(activity: Activity) {
-    this.svgUrl = `/assets/svg/Marie${this.activity.order}.svg`;
+    this.svgUrl = `assets/svg/Marie${this.activity.order}.svg`;
   }
 
   public onSVGInserted(data: any) {
