@@ -2,3 +2,16 @@
   <li *ngFor="let caption of captions" (click)="selectCaption(caption)"
     [ngClass]="{'active': selectedCaption?.order === caption.order}">{{caption.captionLabel}}</li>
 </ul>
+
+
+<!--checkbox -->
+<div class="stu-activity-header pb-0  pt-2">
+  <h2 class="text-start">Add Caption</h2>
+</div>
+<div class="custom-checkbox-input">
+  <div class="form-check ps-0  pe-2 checkbox">
+    <input type="checkbox" class="form-check-input" id="caption-checkbox">
+    <label class="form-check-label" for="caption-checkbox"></label>
+  </div>
+<input type="text" class="form-control">
+</div>
