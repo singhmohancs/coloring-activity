@@ -156,38 +156,13 @@ h2 {
 
 /**input-focus**/
 
-input{
+.form-control{
+
   &:focus{
     outline:none;
     box-shadow: none  !important;
-    border:1px solid $primary;
+    border:1px solid $primary-300 !important;
   }
 }
 
 
-/**checkbox input**/
-
-.form-check{
-  align-items: center;
-  display: flex;
-  width: 32px;
-  height: 32px;
-  background: $light-200;
-  justify-content: center;
-  margin: 0px auto;
-  margin-right: rem(10px) !important;
-  border-radius: rem(3px);
- 
-}
-
-
-.custom-checkbox-input{
-  display:flex;
-  padding-top:rem(10px);
-
-    input{
-      font-size: rem(14px);
-      border: 1px solid $light-300;
-    }
-  
-}
