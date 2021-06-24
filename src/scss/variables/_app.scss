@@ -1,6 +1,6 @@
 // Theme colors
 @import "../components/mixin";
-$orange: #2b6ed3 !default;
+$blue: #2b6ed3 !default;
 
 
 
@@ -15,7 +15,7 @@ $light-400:#daffda;
 $light-500:#ccc;
 $light-green:#6ebb6e;
 
-$primary: $orange !default;
+$primary: $blue  !default;
 $theme-colors: ("primary": $primary) !default;
 $font-family-sans-serif: 'Quicksand', sans-serif;
 

@@ -17,17 +17,20 @@
 
 .intro-img{
   border:1px solid $light-300;
-  padding:rem(10px);
+  padding:rem(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(2px);
   @media screen and(max-width: 767px)and(min-width:320px) {
    margin-top:rem(30px);
   }
-  img{
-    width: 100%;
-    max-width: 500px;
-    height: 450px;
-    @media screen and(max-width: 767px)and(min-width:320px) {
-  height:100%;
-  max-width: 100%;
-     }
-  }
+
+}
+
+.stu-activity-footer-info {
+  @media screen and(max-width: 767px)and(min-width:320px) {
+    margin-top:rem(30px) !important;
+   }
+
 }
