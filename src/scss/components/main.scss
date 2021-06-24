@@ -105,7 +105,7 @@ h2 {
     font-size: rem(18px) !important;
   }
 
-  @media screen and(max-width:1024px)and(min-width:992px) {
+  @media screen and(max-width:991px)and(min-width:992px) {
     font-size: rem(20px) !important;
   }
 
@@ -115,14 +115,14 @@ h2 {
   @media screen and(max-width:767px)and(min-width:320px) {
     right: 10px !important
   }
-  @media screen and(max-width:1024px)and(min-width:320px) {
+  @media screen and(max-width:991px)and(min-width:320px) {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
   }
 }
 .swiper-button-prev {
   left: 20px !important;
-  @media screen and(max-width:1024px)and(min-width:320px) {
+  @media screen and(max-width:991px)and(min-width:320px) {
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
   }
@@ -132,17 +132,17 @@ h2 {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  @media screen and(max-width:1024px)and(min-width:320px) {
+  @media screen and(max-width:991px)and(min-width:320px) {
     background: $primary;
-    width: 35px !important;
+    width: rem(30px) !important;
     opacity: 0.70 !important;
   }
   &:after {
     color: $primary;
     font-weight: bold;
-    @media screen and(max-width:1024px)and(min-width:320px) {
+    @media screen and(max-width:991px)and(min-width:320px) {
       color: $white;
-      font-size: rem(20px) !important;
+      font-size: rem(16px) !important;
     }
   }
 }
