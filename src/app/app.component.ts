@@ -186,5 +186,9 @@ export class AppComponent implements OnInit {
     return this.activitiesSettings[this.activityId]? this.activitiesSettings[this.activityId].caption : null;
   }
 
+  downloadJson(){
+    this.activityService.downloadJson();
+  }
+
 
 }

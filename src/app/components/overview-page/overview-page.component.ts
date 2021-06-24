@@ -2,7 +2,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivityBuilderService } from 'src/app/activity-builder.service';
 import { AppProvider } from 'src/app/app.provider';
-import { saveAs } from 'file-saver';
 // import Swiper core and required modules
 import SwiperCore, {
   Navigation,
@@ -48,13 +47,7 @@ export class OverviewPageComponent implements OnInit {
    * @memberof OverviewPageComponent
    */
   private loadActivitySettings() {
-    let activitiesConfig: any = localStorage.getItem('activities') || '';
-    try {
-      activitiesConfig = JSON.parse(activitiesConfig);
-    } catch (error) {
-      activitiesConfig = {};
-    }
-    this.activitiesConfig = activitiesConfig;
+    this.activitiesConfig = this.activityService.loadActivitySettings();
   }
 
   /**
@@ -66,13 +59,7 @@ export class OverviewPageComponent implements OnInit {
   }
 
   downloadJson(){
-    let json:any = {
-      data : this.activitiesConfig,
-      appId: this.appProvider.appConfig.appId
-    };
-    json = JSON.stringify(json);
-    const blob = new Blob([json], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, `${this.appProvider.appConfig.appName}.cb`);
+    this.activityService.downloadJson();
   }
 
   printPage(){
