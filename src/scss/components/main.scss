@@ -153,3 +153,16 @@ h2 {
 .swiper-wrapper {
   transition: 1s ease-in-out !important;
 }
+
+/**input-focus**/
+
+.form-control{
+
+  &:focus{
+    outline:none;
+    box-shadow: none  !important;
+    border:1px solid $primary-300 !important;
+  }
+}
+
+
