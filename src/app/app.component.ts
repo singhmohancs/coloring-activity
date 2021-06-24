@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
   public activityConfig: any = {};
   public activityPages: any[] = [];
   public currentAcitity: Activity | Object = {};
+  public renderActivities: boolean = true;
 
   constructor(
     private appProvider: AppProvider,
@@ -49,6 +50,15 @@ export class AppComponent implements OnInit {
       return new Activity().deserialize(p);
     });
     this.setActivitiesSettings();
+
+    this.activityService.reRenderActivity.subscribe(()=>{
+      this.renderActivities = false;
+      this.activitiesSettings = this.getActivitiesSettings();
+      this.setActivitiesSettings();
+      setTimeout(() => {
+        this.renderActivities = true;
+      })
+    });
   }
   /**
    * getActivitiesSettings

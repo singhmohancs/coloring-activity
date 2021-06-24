@@ -7,5 +7,6 @@ export class ActivityBuilderService {
   bindSvgClick = new EventEmitter();
   bindSvgRepaint = new EventEmitter();
   onSlideChange = new EventEmitter();
+  reRenderActivity = new EventEmitter();
   constructor() { }
 }

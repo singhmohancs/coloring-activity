@@ -17,7 +17,9 @@ interface AppConfig {
 export class AppProvider {
 
   public appConfig: any;
-  constructor(private injector: Injector) {}
+  constructor(private injector: Injector) {
+    localStorage.removeItem('activities');
+  }
   resolveDependencies() {
     return new Promise((resolve, reject) => {
       const http = this.injector.get(HttpClient);

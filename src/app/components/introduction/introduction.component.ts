@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ActivityBuilderService } from 'src/app/activity-builder.service';
 import { AppProvider } from 'src/app/app.provider';
 import { MessageModalComponent } from '../message-modal/message-modal.component';
 
@@ -11,7 +12,8 @@ import { MessageModalComponent } from '../message-modal/message-modal.component'
 export class IntroductionComponent {
   constructor(
     private appProvider: AppProvider,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private activityService: ActivityBuilderService
   ) { }
 
   /**
@@ -45,7 +47,8 @@ export class IntroductionComponent {
     const modalRef = this.modalService.open(MessageModalComponent, { centered: true, backdrop: 'static', keyboard: false });
     modalRef.componentInstance.message = message;
     modalRef.componentInstance.type = type;
-
-
+    modalRef.result.then(() => {
+      this.activityService.reRenderActivity.emit();
+    })
   }
 }

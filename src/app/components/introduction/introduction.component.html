@@ -34,7 +34,7 @@
         </div>
         <div class="stu-activity-footer-info mt-5 pb-4 d-flex justify-content-center">
           <button type="button" class="btn btn-primary" (click)="fileInput.click()">Import Saved Story
-            <input type="file" #fileInput [fileUploader] name="fileUploader" (onUpload)="onFileUpload($event)" class="visually-hidden" />
+            <input type="file" #fileInput accept=".cb" [fileUploader] name="fileUploader" (onUpload)="onFileUpload($event)" class="visually-hidden" />
           </button>
         </div>
       </div>

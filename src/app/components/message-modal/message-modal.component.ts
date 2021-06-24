@@ -12,10 +12,6 @@ export class MessageModalComponent{
   constructor(public activeModal: NgbActiveModal) {}
   closeModal(): void{
     this.activeModal.close();
-    if(this.type === 'success'){
-      window.location.reload();
-    }
-
   }
 
 }
