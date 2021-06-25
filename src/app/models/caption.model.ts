@@ -1,4 +1,5 @@
 export interface Caption {
-  order: number;
+  order?: number;
   captionLabel: string;
+  custom?: boolean;
 }

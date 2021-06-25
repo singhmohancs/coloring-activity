@@ -183,6 +183,7 @@ export class AppComponent implements OnInit {
       this.selectedCaption = null;
     }
     this.activityService.onSlideChange.emit(data.activeIndex);
+    this.selectedColor = '';
   }
 
   getCaption(){

@@ -20,6 +20,7 @@ import { ActivityBuilderService } from './activity-builder.service';
 import { AppShellComponent } from './shell.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -43,6 +44,7 @@ export function appProviderFactory(provider: AppProvider) {
   imports: [
     CommonModule,
     BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule,
     InlineSVGModule.forRoot(),
     SwiperModule,

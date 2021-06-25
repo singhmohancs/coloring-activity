@@ -1,4 +1,7 @@
 <ul class="list-unstyled caption-list">
+  <li class="no-style">
+    <input [formControl]="captionField" type="text" class="form-control" placeholder="Enter your caption">
+  </li>
   <li *ngFor="let caption of captions" (click)="selectCaption(caption)"
     [ngClass]="{'active': selectedCaption?.order === caption.order}">{{caption.captionLabel}}</li>
 </ul>
