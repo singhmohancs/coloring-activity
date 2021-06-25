@@ -9,7 +9,7 @@ interface ActivitySettings  {
 class Activity implements Deserializable {
   order: number | undefined;
   svg: string | undefined;
-  captionOptins: Caption[] | undefined;
+  captionOptions: Caption[] | undefined;
   settings ?: ActivitySettings;
   selectedCaption: Caption | undefined;
   deserialize(input: any) {

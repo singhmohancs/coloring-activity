@@ -7,7 +7,7 @@ interface AppConfig {
   introPageInstructions: string;
   coloringPages: {
     colorOptions: { order: number, name: string, color: string }[];
-    pages: { order: number, svg: string, captionOptins: { order: number, captionLabel: string }[] }[]
+    pages: { order: number, svg: string, captionOptions: { order: number, captionLabel: string }[] }[]
   };
   summaryPageTitle: string;
   SummaryInstructions: string;

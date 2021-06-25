@@ -1,6 +1,6 @@
 {
-  "name": "e-learning-activity",
-  "version": "0.0.0",
+  "name": "make-your-story",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

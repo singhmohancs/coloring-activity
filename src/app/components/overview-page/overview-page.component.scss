@@ -12,12 +12,26 @@
   overflow-x: auto;
   overflow-y: hidden;
 
+  .custom-horizontal-scroll {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .scroll-container {
+    @media screen {
+      max-width:200px;  
+    }
+  }
+
   .stu-activity-content-area {
-    max-width: rem(310px);
+    
+    @media screen {
+      max-width: rem(310px);
+    } 
     width: 100%;
     margin: 0px auto rem(20px);
 
-    @media screen and(max-width: 991px)and(min-width:320px) {
+    @media screen {
       max-width: 100%;
       text-align: center;
     }
@@ -26,7 +40,7 @@
 }
 
 .stu-complete-story-sec {
-  @media screen and (orientation:landscape) {
+  @media screen {
     height: 100%;
     padding-top: rem(20px);
     min-height: 100vh;
@@ -35,7 +49,7 @@
 
   .stu-activity-header {
     &.story-heading {
-      @media screen and(max-width: 991px)and(min-width:320px) {
+      @media screen {
         padding: rem(10px) 0;
 
         h2 {
@@ -48,7 +62,7 @@
     h5 {
       font-size: rem(20px);
 
-      @media screen and(max-width: 991px)and(min-width:320px) {
+      @media screen {
         font-size: rem(16px);
       }
 
@@ -56,17 +70,26 @@
   }
 
   .activity-img {
+    
     width: 100%;
-    max-width: rem(415px);
-    height: rem(200px);
+      
+    @media screen {
+      max-width: rem(415px);
+      height: rem(200px);
+    }
     margin: 0px auto;
     text-align: center;
 
     svg {
       width: 100%;
-      max-width: rem(415px);
-      height: rem(200px);
+      
+      @media screen {
+        max-width: rem(415px);
+        height: rem(200px);
+      }
     }
+
+
   }
 
 
@@ -79,9 +102,6 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-
-
-
 }
 
 
@@ -115,7 +135,7 @@
       display: block;
     }
 
-    .col-lg-3 {
+    .custom-horizontal-scroll {
       width: 100%;
       page-break-after: always;
     }
@@ -125,7 +145,7 @@
     }
 
     .stu-activity-content-area {
-      max-width: 400px;
+      text-align: center;
     }
   }
 }

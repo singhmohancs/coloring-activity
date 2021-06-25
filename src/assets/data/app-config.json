@@ -1,8 +1,9 @@
 {
-  "appName": "Coloring Book Activity",
-  "appId": "coloring-book-first-activity",
-  "introPageTitle": "Introduction Title",
-  "introPageInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>",
+  "appName": "Saint Marie Incarnation",
+  "appId": "Saint-Marie-Incarnation",
+  "introPageTitle": "Make your Story!",
+  "introPageInstructions": "<p>In this activity, you'll be able to color and build your own story of Saint Marie of the Incarnation!</p><p>For each page of story, you'll color the image and select a caption from the captions provided.</p><p>You’ll see all your pictures with the captions you selected at the end.</p><p>You can save your story to your device to continue working later. You can also print your story when you get to the end.</p><p>Click the <span class='fw-bold'>Next</span> arrow to get started!</p><p>Note: If you'd like to complete a previously saved story, use the <span class='fw-bold'>Import Saved Story</span> below.</p>",
+  "introImage": "svg/Marie10.svg",
   "coloringPages": {
     "colorOptions": [
       {
@@ -42,8 +43,8 @@
       },
       {
         "order": 8,
-        "name": "gray",
-        "color": "#CCCCCC"
+        "name": "white",
+        "color": "#FFFFFF"
       },
       {
         "order": 9,
@@ -77,66 +78,27 @@
       },
       {
         "order": 15,
-        "name": "birght-green",
+        "name": "bright-green",
         "color": "#9ACD32"
       },
       {
         "order": 16,
         "name": "teal",
         "color": "#0D98BA"
-      },
-      {
-        "order": 17,
-        "name": "orange",
-        "color": "#FF5722"
-      },
-      {
-        "order": 18,
-        "name": "light-blue",
-        "color": "#03A9F4"
-      },
-      {
-        "order": 19,
-        "name": "dark-pink",
-        "color": "#E91E63"
-      },
-      {
-        "order": 20,
-        "name": "white",
-        "color": "#FFFFFF"
-      },
-      {
-        "order": 21,
-        "name": "sky-blue",
-        "color": "#2AE2F4"
-      },
-      {
-        "order": 22,
-        "name": "light-gray",
-        "color": "#F2F0F0"
-      },
-
-      {
-        "order": 23,
-        "name": "dark-green",
-        "color": " #42692F"
       }
-
-
-
     ],
     "pages": [
       {
         "order": 1,
         "svg": "Marie1.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -144,7 +106,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -159,14 +121,14 @@
       {
         "order": 2,
         "svg": "Marie2.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -174,7 +136,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -189,14 +151,14 @@
       {
         "order": 3,
         "svg": "Marie3.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -204,7 +166,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -219,14 +181,14 @@
       {
         "order": 4,
         "svg": "Marie4.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -234,7 +196,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -249,14 +211,14 @@
       {
         "order": 5,
         "svg": "Marie5.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -264,7 +226,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -278,14 +240,14 @@
       },{
         "order": 6,
         "svg": "Marie6.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "God expects great things from you if you let him handle your heart."
           },
           {
             "order": 3,
@@ -293,7 +255,7 @@
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
           },
           {
             "order": 5,
@@ -307,180 +269,184 @@
       },{
         "order": 7,
         "svg": "Marie7.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       },{
         "order": 8,
         "svg": "Marie8.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       },{
         "order": 9,
         "svg": "Marie9.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       },{
         "order": 10,
         "svg": "Marie10.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       },{
         "order": 11,
         "svg": "Marie11.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       },{
         "order": 12,
         "svg": "Marie12.svg",
-        "captionOptins": [
+        "captionOptions": [
           {
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "The love and the life of Jesusbe your heritage."
           }
         ]
       }
     ]
   },
-  "summaryPageTitle": "Summary Title",
-  "SummaryInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>"
+  "summaryPageTitle": "You've Completed Your Story!",
+  "summaryInstructions": "<p>Congratulations, you've completed your story! Be sure to save and print your story so you don't lose it.</p>",
+  "summaryYourStoryTitle": "Your Story",
+  "importButtonLabel": "Import Saved Story",
+  "printButtonLabel": "Print",
+  "saveButtonLabel": "Save My Story"
 }

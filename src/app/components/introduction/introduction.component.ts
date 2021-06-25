@@ -16,6 +16,18 @@ export class IntroductionComponent {
     private activityService: ActivityBuilderService
   ) { }
 
+  public introductionText: string = '';
+  public introductionPageTitle: string = '';
+  public introductionImage: string = '';
+  public importButtonLabel: string = '';
+
+  ngOnInit(): void {
+    this.introductionText = this.appProvider.appConfig.introPageInstructions;
+    this.introductionPageTitle = this.appProvider.appConfig.introPageTitle;
+    this.introductionImage = this.appProvider.appConfig.introImage;
+    this.importButtonLabel = this.appProvider.appConfig.importButtonLabel;
+  }
+
   /**
    * onFileUpload
    * process file content

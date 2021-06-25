@@ -23,6 +23,13 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 export class OverviewPageComponent implements OnInit {
   public activitiesConfig:any;
   public activities:any;
+  public summaryPageTitle: string = '';
+  public summaryInstructions: string = '';
+  public summaryYourStoryTitle: string = '';
+  public importButtonLabel: string = '';
+  public printButtonLabel: string = '';
+  public saveButtonLabel: string = '';
+
   constructor(
     private appProvider: AppProvider,
     private router: Router,
@@ -37,6 +44,12 @@ export class OverviewPageComponent implements OnInit {
       }
     })
     this.loadActivitySettings();
+    this.summaryPageTitle = this.appProvider.appConfig.summaryPageTitle;
+    this.summaryInstructions = this.appProvider.appConfig.summaryInstructions;
+    this.summaryYourStoryTitle = this.appProvider.appConfig.summaryYourStoryTitle;
+    this.importButtonLabel = this.appProvider.appConfig.importButtonLabel;
+    this.printButtonLabel = this.appProvider.appConfig.printButtonLabel;
+    this.saveButtonLabel = this.appProvider.appConfig.saveButtonLabel;
   }
 
   /**
