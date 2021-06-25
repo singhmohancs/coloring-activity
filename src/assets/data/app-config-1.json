@@ -1,0 +1,452 @@
+{
+  "appName": "Saint Marie Incarnation",
+  "appId": "Saint-Marie-Incarnation",
+  "introPageTitle": "Make your Story!",
+  "introPageInstructions": "<p>In this activity, you'll be able to color and build your own story of Saint Marie of the Incarnation!</p><p>For each page of story, you'll color the image and select a caption from the captions provided.</p><p>You’ll see all your pictures with the captions you selected at the end.</p><p>You can save your story to your device to continue working later. You can also print your story when you get to the end.</p><p>Click the <span class='fw-bold'>Next</span> arrow to get started!</p><p>Note: If you'd like to complete a previously saved story, use the <span class='fw-bold'>Import Saved Story</span> below.</p>",
+  "introImage": "svg/Marie10.svg",
+  "coloringPages": {
+    "colorOptions": [
+      {
+        "order": 1,
+        "name": "red",
+        "color": "#FF0000"
+      },
+      {
+        "order": 2,
+        "name": "orange",
+        "color": "#FFA500"
+      },
+      {
+        "order": 3,
+        "name": "yellow",
+        "color": "#FFFF00"
+      },
+      {
+        "order": 4,
+        "name": "green",
+        "color": "#008000"
+      },
+      {
+        "order": 5,
+        "name": "blue",
+        "color": "#0000FF"
+      },
+      {
+        "order": 6,
+        "name": "purple",
+        "color": "#A020F0"
+      },
+      {
+        "order": 7,
+        "name": "black",
+        "color": "#000000"
+      },
+      {
+        "order": 8,
+        "name": "white",
+        "color": "#FFFFFF"
+      },
+      {
+        "order": 9,
+        "name": "dark-gray",
+        "color": "#808080"
+      },
+      {
+        "order": 10,
+        "name": "dark-orange",
+        "color": "#CC8B34"
+      },
+      {
+        "order": 11,
+        "name": "pink",
+        "color": "#FFC0CB"
+      },
+      {
+        "order": 12,
+        "name": "light-yellow",
+        "color": "#FFE39F"
+      },
+      {
+        "order": 13,
+        "name": "dark-red",
+        "color": "#A52A2A"
+      },
+      {
+        "order": 14,
+        "name": "light-purple",
+        "color": "#DBBFF6"
+      },
+      {
+        "order": 15,
+        "name": "bright-green",
+        "color": "#9ACD32"
+      },
+      {
+        "order": 16,
+        "name": "teal",
+        "color": "#0D98BA"
+      }
+    ],
+    "pages": [
+      {
+        "order": 1,
+        "svg": "Marie1.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "svg": "Marie2.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "svg": "Marie3.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "svg": "Marie4.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "svg": "Marie5.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 6,
+        "svg": "Marie6.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "Build in your soul an interior solitude that you can keen everywhere. There, live in God."
+          },
+          {
+            "order": 2,
+            "captionLabel": "God expects great things from you if you let him handle your heart."
+          },
+          {
+            "order": 3,
+            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+          },
+          {
+            "order": 4,
+            "captionLabel": "How good is to rely only on the Providence of such a good Father."
+          },
+          {
+            "order": 5,
+            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+          },
+          {
+            "order": 6,
+            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+          }
+        ]
+      },{
+        "order": 7,
+        "svg": "Marie7.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      },{
+        "order": 8,
+        "svg": "Marie8.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      },{
+        "order": 9,
+        "svg": "Marie9.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      },{
+        "order": 10,
+        "svg": "Marie10.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      },{
+        "order": 11,
+        "svg": "Marie11.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      },{
+        "order": 12,
+        "svg": "Marie12.svg",
+        "captionOptions": [
+          {
+            "order": 1,
+            "captionLabel": "It is not enough to do God's will, we must do it with interior love and exterior good grace."
+          },
+          {
+            "order": 2,
+            "captionLabel": "May God be blessed for everything. He is my all and my life wherever I may be."
+          },
+          {
+            "order": 3,
+            "captionLabel": "May the peace and love of Jesus be my affectionate greeting for you."
+          },
+          {
+            "order": 4,
+            "captionLabel": "My loving Jesus, by the sanctity of your actions, sanctify mine."
+          },
+          {
+            "order": 5,
+            "captionLabel": "The Spirit of grace who guided me, made me over come all difficulties."
+          },
+          {
+            "order": 6,
+            "captionLabel": "The love and the life of Jesusbe your heritage."
+          }
+        ]
+      }
+    ]
+  },
+  "summaryPageTitle": "You've Completed Your Story!",
+  "summaryInstructions": "<p>Congratulations, you've completed your story! Be sure to save and print your story so you don't lose it.</p>",
+  "summaryYourStoryTitle": "Your Story",
+  "importButtonLabel": "Import Saved Story",
+  "printButtonLabel": "Print",
+  "saveButtonLabel": "Save My Story"
+}

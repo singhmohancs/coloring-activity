@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
   public activityPages: any[] = [];
   public currentAcitity: Activity | Object = {};
   public renderActivities: boolean = true;
+  public saveButtonLabel: string = '';
 
   constructor(
     private appProvider: AppProvider,
@@ -59,6 +60,8 @@ export class AppComponent implements OnInit {
         this.renderActivities = true;
       })
     });
+
+    this.saveButtonLabel = this.appProvider.appConfig.saveButtonLabel;
   }
   /**
    * getActivitiesSettings
@@ -171,7 +174,7 @@ export class AppComponent implements OnInit {
     const activity = this.activityPages[data.activeIndex - 1];
     if (activity) {
       this.currentAcitity = activity;
-      this.captions = activity.captionOptins;
+      this.captions = activity.captionOptions;
       this.activityId = activity.order;
       if (this.activitiesSettings[this.activityId]) {
         this.selectedCaption = this.activitiesSettings[this.activityId].caption;
@@ -180,6 +183,7 @@ export class AppComponent implements OnInit {
       this.selectedCaption = null;
     }
     this.activityService.onSlideChange.emit(data.activeIndex);
+    this.selectedColor = '';
   }
 
   getCaption(){

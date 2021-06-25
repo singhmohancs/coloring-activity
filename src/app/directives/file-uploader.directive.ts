@@ -1,6 +1,4 @@
-import { Directive, ElementRef, EventEmitter, HostListener, Input, Output, SimpleChanges } from '@angular/core';
-import { ActivityBuilderService } from '../activity-builder.service';
-
+import { Directive, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Directive({ selector: '[fileUploader]' })
 export class FileUploaderDirective {
@@ -14,13 +12,6 @@ export class FileUploaderDirective {
   }
 
   ngOnInit(): void {
-  }
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes.hasOwnProperty('fileUploader')) {
-      if (changes['fileUploader'].currentValue != changes['fileUploader'].previousValue) {
-        //on directive changes
-      }
-    }
   }
 
   @HostListener('change') onChangeFile() {

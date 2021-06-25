@@ -1,11 +1,11 @@
 {
-  "appName": "Coloring Book Activity",
-  "appId": "coloring-book-first-activity",
-  "introPageTitle": "Introduction Title",
-  "introPageInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>",
+  "appName": "Saints Benedict and Scholastica",
+  "appId": "Saints-Benedict-And-Scholastica",
+  "introPageTitle": "Make your Story!",
+  "introPageInstructions": "<p>In this activity, you'll be able to color and build your own story of Saints Benedict and Scholastica!</p><p>For each page of story, you'll color the image and select a caption from the captions provided.</p><p>You’ll see all your pictures with the captions you selected at the end.</p><p>You can save your story to your device to continue working later. You can also print your story when you get to the end.</p><p>Click the <span class='fw-bold'>Next</span> arrow to get started!</p><p>Note: If you'd like to complete a previously saved story, use the <span class='fw-bold'>Import Saved Story</span> below.</p>",
+  "introImage": "svg/Benedict06.svg",
   "coloringPages": {
-    "colorOptions": [
-      {
+    "colorOptions": [{
         "order": 1,
         "name": "red",
         "color": "#FF0000"
@@ -42,8 +42,8 @@
       },
       {
         "order": 8,
-        "name": "gray",
-        "color": "#CCCCCC"
+        "name": "white",
+        "color": "#FFFFFF"
       },
       {
         "order": 9,
@@ -77,410 +77,546 @@
       },
       {
         "order": 15,
-        "name": "birght-green",
+        "name": "bright-green",
         "color": "#9ACD32"
       },
       {
         "order": 16,
         "name": "teal",
         "color": "#0D98BA"
-      },
-      {
-        "order": 17,
-        "name": "orange",
-        "color": "#FF5722"
-      },
-      {
-        "order": 18,
-        "name": "light-blue",
-        "color": "#03A9F4"
-      },
-      {
-        "order": 19,
-        "name": "dark-pink",
-        "color": "#E91E63"
-      },
-      {
-        "order": 20,
-        "name": "white",
-        "color": "#FFFFFF"
-      },
-      {
-        "order": 21,
-        "name": "sky-blue",
-        "color": "#2AE2F4"
-      },
-      {
-        "order": 22,
-        "name": "light-gray",
-        "color": "#F2F0F0"
-      },
-
-      {
-        "order": 23,
-        "name": "dark-green",
-        "color": " #42692F"
       }
-
-
-
     ],
-    "pages": [
-      {
+    "pages": [{
         "order": 1,
-        "svg": "Marie1.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict01.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
       },
       {
         "order": 2,
-        "svg": "Marie2.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict02.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
       },
       {
         "order": 3,
-        "svg": "Marie3.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict03.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
       },
       {
         "order": 4,
-        "svg": "Marie4.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict04.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
       },
       {
         "order": 5,
-        "svg": "Marie5.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict05.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
-      },{
+      }, {
         "order": 6,
-        "svg": "Marie6.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict06.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
-      },{
+      }, {
         "order": 7,
-        "svg": "Marie7.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict07.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
-      },{
+      }, {
         "order": 8,
-        "svg": "Marie8.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict08.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
-      },{
+      }, {
         "order": 9,
-        "svg": "Marie9.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict09.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "captionLabel": "Pray and Work"
+          },
+          {
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
+          },
+          {
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
+          },
+          {
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
+          },
+          {
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
+          },
+          {
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
+          },
+          {
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
-      },{
+      }, {
         "order": 10,
-        "svg": "Marie10.svg",
-        "captionOptins": [
-          {
+        "svg": "Benedict10.svg",
+        "captionOptions": [{
             "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Saints Benedict and Scholastica, pray that we may have the wisdom to love, serve, and praise God in our words and deeds."
           },
           {
             "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "captionLabel": "“Either speak of God or keep silence, for, what in this world is so worthy of speech?”—Saint Scholastica."
           },
           {
             "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "captionLabel": "Benedict learned of sister Scholastica’s death by a divine sign: he saw his sister’s soul ascend into heaven in the form of a white dove."
           },
           {
             "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "captionLabel": "Benedict and Scholastica founded communities of believers who lived together in lives of prayer and meaningful work."
           },
           {
             "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "captionLabel": "The Rule of Saint Benedict told members of the community how to spend their day. "
           },
           {
             "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
-          }
-        ]
-      },{
-        "order": 11,
-        "svg": "Marie11.svg",
-        "captionOptins": [
-          {
-            "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "captionLabel": "Pray and Work"
           },
           {
-            "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
+            "order": 7,
+            "captionLabel": "“The brethren are also to obey one another, knowing that by this road of obedience they are going to God.” (Rule of Saint Benedict, c. 71) "
           },
           {
-            "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
+            "order": 8,
+            "captionLabel": "“Whoever you are . . . fulfill with the help of Christ this minimum Rule which we have written for beginners.” (Rule of Saint Benedict, c. 73) "
           },
           {
-            "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
+            "order": 9,
+            "captionLabel": "“When the Work of God is ended, let all go out in perfect silence.” (Rule of Saint Benedict, c. 52) "
           },
           {
-            "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
+            "order": 10,
+            "captionLabel": "“She should show them all that is good and holy by her deeds even more than by her words.” (Rule of Saint Benedict, chapter 2.11) "
           },
           {
-            "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
-          }
-        ]
-      },{
-        "order": 12,
-        "svg": "Marie12.svg",
-        "captionOptins": [
-          {
-            "order": 1,
-            "captionLabel": "Build in your soul on interior solitude that you can keen everywhere. There, live in God."
+            "order": 11,
+            "captionLabel": "“In community, however, let prayer be very short, and when the Superior gives the signal let all rise together.” (Rule or Saint Benedict, c. 20) "
           },
           {
-            "order": 2,
-            "captionLabel": "God expects great things from you if you let him handle your."
-          },
-          {
-            "order": 3,
-            "captionLabel": "God has his hour and he'll enable you to accomplish what he has determined for you from all eternity."
-          },
-          {
-            "order": 4,
-            "captionLabel": "How good is to reply only on the Providence of such a good."
-          },
-          {
-            "order": 5,
-            "captionLabel": "Jesus knows what he wants to do with us, let us be glad to let Him do it."
-          },
-          {
-            "order": 6,
-            "captionLabel": "I am surprised that knowing that God is our Father, we aren't always happy."
+            "order": 12,
+            "captionLabel": "“Let them prefer nothing whatever to Christ. And may He bring us all together to everlasting life!” Rule of Benedict, ch. 72)"
           }
         ]
       }
     ]
   },
-  "summaryPageTitle": "Summary Title",
-  "SummaryInstructions": "<p>Nam adipiscing. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Integer tincidunt. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.</p><p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vivamus in erat ut urna cursus vestibulum. Donec vitae orci sed dolor rutrum auctor. Aliquam erat volutpat. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>"
+  "summaryPageTitle": "You've Completed Your Story!",
+  "summaryInstructions": "<p>Congratulations, you've completed your story! Be sure to save and print your story so you don't lose it.</p>",
+  "summaryYourStoryTitle": "Your Story",
+  "importButtonLabel": "Import Saved Story",
+  "printButtonLabel": "Print",
+  "saveButtonLabel": "Save My Story"
 }
