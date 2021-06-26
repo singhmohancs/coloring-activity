@@ -6,49 +6,7 @@
   <ng-container *ngIf="renderActivities">
     <ng-container *ngFor="let activity of activityPages; let i=index">
       <ng-template swiperSlide>
-        <div class="activity-page-content">
-          <div class="container">
-            <div class="stu-activity-header">
-              <h1>Page {{i+1}}</h1>
-            </div>
-            <div class="row stu-activity-row ">
-              <div class="col-sm-3 col-md-6 col-lg-6 col-xl-4">
-                <div class="activity-left-col">
-                  <div
-                    class="stu-activity-header pt-0 align-items-md-center justify-content-md-center mb-4 pb-0 d-flex flex-column align-items-lg-start justify-content-lg-start">
-                    <h2>Color It!</h2>
-                    <p>Use the colors below to color the coloring page!</p>
-                  </div>
-                  <app-color-picker [colors]="colors" (onSelect)="onColorSelect($event)">
-                  </app-color-picker>
-                  <div class="stu-activity-right-col ">
-                    <div
-                      class="stu-activity-header caption-heading pt-2  pb-2 d-flex align-items-start justify-content-start">
-                      <h2>Select Caption</h2>
-                    </div>
-                    <div class="stu-activity-content-area">
-                      <app-activity-caption [captions]="captions" [caption]="getCaption()"
-                        (onSelect)="onCaptionSelect($event)"></app-activity-caption>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-9 col-md-6 col-lg-6 col-xl-8">
-                <div class="stu-activity-right-col activity-right-img-col">
-                  <app-svg-painter [activity]='activity' [activityConfig]="activity.settings"
-                    [selectedColor]='selectedColor' (onSvgClicked)="onSvgClicked($event)"></app-svg-painter>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="stu-activity-footer-info justify-content-center ">
-                  <button class="p-2 btn btn-sm btn-primary" (click)="downloadJson()" type="button">{{saveButtonLabel}}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <app-activity [currentIndex]="i" [activitiesSettings] = "activitiesSettings" [activity] = "activity" [colors]="colors"></app-activity>
       </ng-template>
     </ng-container>
   </ng-container>

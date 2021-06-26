@@ -31,8 +31,9 @@ export class ActivityCaptionComponent implements OnInit {
   ngOnInit() {
     this.captionField.valueChanges.pipe(
       debounceTime(500),
-      distinctUntilChanged()
+      distinctUntilChanged(),
     ).subscribe(text => {
+      if(text.trim().length == 0) return;
       this.selectedCaption = {
         captionLabel: text,
         custom: true,
@@ -45,6 +46,8 @@ export class ActivityCaptionComponent implements OnInit {
     if (changes.hasOwnProperty('caption')) {
       if (changes['caption'].currentValue != changes['caption'].previousValue) {
         this.selectedCaption = this.caption;
+        let customCaptionValue = this.selectedCaption && this.selectedCaption.custom ? this.selectedCaption.captionLabel : ''
+        this.captionField.setValue(customCaptionValue);
       }
     }
   }

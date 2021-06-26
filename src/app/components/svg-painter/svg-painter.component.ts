@@ -10,7 +10,7 @@ import { Activity } from 'src/app/models/activity.model';
 export class SvgPainterComponent implements OnInit {
   @Input() activity: any;
   @Input() selectedColor?: string;
-  @Input() activityConfig?: string;
+  @Input() activityConfig?: any;
   @Input() svgPainter?: boolean;
   @Output() onSvgClicked: EventEmitter<any> = new EventEmitter<any>();
 

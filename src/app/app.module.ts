@@ -21,6 +21,7 @@ import { AppShellComponent } from './shell.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ActivityComponent } from './components/activity/activity.component';
 
 
 
@@ -39,7 +40,8 @@ export function appProviderFactory(provider: AppProvider) {
     FileUploaderDirective,
     SvgPainterComponent,
     ColorPickerComponent,
-    ActivityCaptionComponent
+    ActivityCaptionComponent,
+    ActivityComponent
    ],
   imports: [
     CommonModule,

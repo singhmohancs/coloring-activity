@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppProvider } from './app.provider';
-import { Color } from './models/color.model';
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -24,19 +23,10 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade, Virtual]);
 })
 export class AppComponent implements OnInit {
   public appConfig: any;
-  public selectedCaption: any;
-  public selectedColor: string | undefined;
-  public activityId: number = 1;
   public activitiesSettings: any = {};
-  public activity: any;
-  public activityPageCount: number = 0;
   public colors: any;
-  public captions: any[] = [];
-  public activityConfig: any = {};
   public activityPages: any[] = [];
-  public currentAcitity: Activity | Object = {};
   public renderActivities: boolean = true;
-  public saveButtonLabel: string = '';
 
   constructor(
     private appProvider: AppProvider,
@@ -61,7 +51,6 @@ export class AppComponent implements OnInit {
       })
     });
 
-    this.saveButtonLabel = this.appProvider.appConfig.saveButtonLabel;
   }
   /**
    * getActivitiesSettings
@@ -94,105 +83,10 @@ export class AppComponent implements OnInit {
       }
     });
   }
-  /**
-   * @name onColorSelect
-   * @description a click handler to select and save selected color in selectedColor variable.
-   *
-   * @param color
-   * @public
-   * @return void
-   */
-  public onColorSelect(colorObj: Color) {
-    this.selectedColor = colorObj ? colorObj.color : '';
-  }
-
-  /**
-   * @name onSvgClicked
-   * @description SVG element click handler.
-   * Apply selected color on targeted element
-   * save selectedColor and cssClass of targeted element
-   *
-   * @param {{ element: HTMLElement, color: string }} data
-   * @memberof ActivityPageComponent
-   * @return void
-   *
-   */
-  public onSvgClicked(data: { element: HTMLElement, color: string }) {
-    if (!data.color) return;
-    const cssClas = this.getUniqueClass(data.element.getAttribute('class'));
-    if (!this.activitiesSettings[this.activityId]) {
-      this.activitiesSettings[this.activityId] = {};
-    }
-    this.activitiesSettings[this.activityId][cssClas] = data.color.trim();
-    this.saveData(this.activitiesSettings);
-  }
-
-  private getUniqueClass(cssClass: string | null): string {
-    if (!cssClass) return '';
-    let string_tokens = cssClass.split(' ');
-    string_tokens = string_tokens.filter(token => {
-      return token.startsWith('file-');
-    });
-
-    if (string_tokens.length > 0) {
-      return string_tokens[0];
-    }
-    return '';
-  }
-  /**
-   * @name saveData
-   * @description save activity data to localstorage
-   * @param data
-   *
-   * @return void
-   */
-  private saveData(data: any) {
-    var activities = JSON.stringify(data);
-    localStorage.setItem('activities', activities);
-  }
-  /**
-   * onCaptionSelect
-   * @description select caption and store in selectedCaption
-   *
-   * @param {*} caption
-   * @memberof ActivityPageComponent
-   *
-   * @return void
-   */
-  public onCaptionSelect(caption: any) {
-    if (!caption) return;
-    this.selectedCaption = caption;
-    if (!this.activitiesSettings[this.activityId]) {
-      this.activitiesSettings[this.activityId] = {};
-    }
-    this.activitiesSettings[this.activityId]['caption'] = this.selectedCaption;
-
-    this.saveData(this.activitiesSettings);
-  }
 
   onSlideChange(data: any) {
-    const activity = this.activityPages[data.activeIndex - 1];
-    if (activity) {
-      this.currentAcitity = activity;
-      this.captions = activity.captionOptions;
-      this.activityId = activity.order;
-      if (this.activitiesSettings[this.activityId]) {
-        this.selectedCaption = this.activitiesSettings[this.activityId].caption;
-      }
-    } else {
-      this.selectedCaption = null;
-    }
+    this.getActivitiesSettings();
     this.activityService.onSlideChange.emit(data.activeIndex);
-    this.selectedColor = '';
   }
-
-  getCaption(){
-    return this.activitiesSettings[this.activityId]? this.activitiesSettings[this.activityId].caption : null;
-  }
-
-  downloadJson(){
-    this.activityService.downloadJson();
-  }
-
 
 }
